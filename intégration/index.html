@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <title>Colive'In - Collocation pour sénior autonome</title>
@@ -12,28 +13,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+
 </head>
 
 <body>
-    
+
+    <!-- Video in backgrounbd integration -->
     <div class="video-container">
         <div class="overlay"></div>
         <video autoplay loop muted>
             <source src="https://colivein.com/wp-content/uploads/2022/10/colivein-hero-video.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la vidéo.
         </video>
-        
-        <!-- First block -- contain header, video in bg -->
-        <header class="content-block header-conteiner ">
 
-
+        <!-- Header section-->
+        <header>
             <div class="container">
 
-
-                <!-- Mettez ici le chemin réel vers votre vidéo -->
+                <!-- Navbar -->
                 <nav class="navbar navbar-expand-lg align-items-center">
                     <div class="container-fluid">
+                        <!-- Site logo -->
                         <a class="navbar-brand" href="#"><img class="nav-logo" src="assets/images/logo.png" alt=""></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -41,6 +44,7 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
+                            <!-- Internal link -->
                             <ul class="navbar-nav ms-auto align-items-center">
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Nos Maisons</a>
@@ -52,7 +56,7 @@
                                     <a class="nav-link" href="#">Nos histoires</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="btn btn-primary text-uppercase">Demande de brochure</a>
+                                    <a class="btn btn-primary">Demande de brochure</a>
                                 </li>
                             </ul>
                         </div>
@@ -60,11 +64,256 @@
                 </nav>
             </div>
         </header>
-    </div> 
-
-    <div class="container">
-dza
     </div>
+
+    <!-- First index section  -- Welcome -->
+    <section class="welcome-section bg-colored">
+        <div class="container">
+            <div class="text-container">
+                <h1 class="h1">Bienvenue dans nos maisons partagées pour séniors autonomes</h1>
+                <p>Chez Colive’in on vit en parfaite autonomie dans des maisons familiales typiques de leurs régions,
+                    proche
+                    de toutes commodités (pharmacie, transport en commun…) <strong>regroupant 4 à 6 personnes par
+                        affinités</strong>
+                    souhaitant partager leur retraite sous le signe de la convivialité !</p>
+
+                <p> Nous sommes convaincus que les relations humaines et le maintien de l’autonomie sont le ciment d’une
+                    retraite épanouie et dynamique.</p>
+                <strong id="strong-together">Ensemble, vivons une seconde jeunesse ?</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second index section  -- House -->
+    <section class="house-section bg-colored">
+        <div class="container">
+            <!-- Intro text -- House section -->
+            <div class="text-container">
+                <h1 class="h1-house-section">
+                    Des maisons pensées pour vous
+                </h1>
+                <p>
+                    Nos maisons disposent de grands espaces communs et privatifs conçu pour <strong> préserver
+                        l’autonomie</strong>. Cette
+                    ambiance sereine et confortable vous permettra de passer de beaux moments d’échange entre amis
+                </p>
+            </div>
+
+            <!-- House cards -- House section -->
+            <div class="card-container d-flex p-2 justify-content-between flex-wrap">
+                <!-- card #01 -- House cards part -->
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top"
+                        src="https://colivein.com/wp-content/uploads/2022/11/AdobeStock_193059911-1-1024x683.jpeg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Sécurité</p>
+                    </div>
+                </div>
+                <!-- card #02-- House cards part -->
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://placehold.co/331x221.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Chambre privative ou partagée</p>
+                    </div>
+                </div>
+                <!-- card #03 -- House cards part -->
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://placehold.co/331x221.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Bien-être au quotidien</p>
+                    </div>
+                </div>
+                <!-- card #04 -- House cards part -->
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://placehold.co/331x221.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Services inclus</p>
+                    </div>
+                </div>
+                <!-- card #05 -- House cards part -->
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://placehold.co/331x221.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Cuisine de qualité</p>
+                    </div>
+                </div>
+                <!-- card #06 -- House cards part -->
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://placehold.co/331x221.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Maison connectée</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Link Button -- House section -->
+            <div class="d-flex justify-content-center">
+                <a href="#"></a>
+                <button class="btn btn-primary btn-learn_more">
+                    En savoir plus <i class="fas fa-long-arrow-alt-right"> </i>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Third index section  -- Services -->
+    <section class="service-section bg-uncolored">
+        <div class="container">
+
+            <!-- Activities part -->
+            <div class="text-container">
+                <h1>Chez Colive'in tout est possible !</h1>
+                <p> Colive’in et ses partenaires forment une équipe de confiance autour d’un projet commun : faire de
+                    votre quotidien <strong> un moment de partage et de découverte</strong> à travers une multitude
+                    d’activités.</p>
+
+                <!-- list of activities #01 -- Activities part -->
+                <ul class="d-flex flex-wrap justify-content-between">
+
+                    <!-- list item #01 -- Activities part-->
+                    <li class="item-list d-flex flex-row">
+                        <i aria-hidden="true" class="fas fa-heart fa-listing"></i>
+
+                        <div class="list-text d-flex flex-column ">
+                            <span class="list-title">Bien-être</span>
+                            <span class="list-description">Yoga, relaxation, expression corporelle...</span>
+                        </div>
+                    </li>
+
+                    <!-- list item #02 -- Activities part -->
+                    <li class="item-list d-flex flex-row">
+                        <i aria-hidden="true" class="fas fa-heartbeat fa-listing"></i>
+
+                        <div class="list-text d-flex flex-column ">
+                            <span class="list-title">Sportives</span>
+                            <span class="list-description">Cours individuel ou collectif, randonnée organisée...</span>
+                        </div>
+                    </li>
+
+                    <!-- list item #03 -- Activities part-->
+                    <li class="item-list d-flex flex-row">
+                        <i aria-hidden="true" class="fas fa-hand-paper fa-listing"></i>
+
+                        <div class="list-text d-flex flex-column ">
+                            <span class="list-title">Manuelles</span>
+                            <span class="list-description">Cours de cuisine, de poterie, d'informatique...</span>
+                        </div>
+                    </li>
+
+                    <!-- list item #04 -- Activities part -->
+                    <li class="item-list d-flex flex-row">
+                        <i aria-hidden="true" class="fas fa-landmark fa-listing"></i>
+
+                        <div class="list-text d-flex flex-column ">
+                            <span class="list-title">Culturelle</span>
+                            <span class="list-description">Voyage, visite de musée, sortie cinéma...</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- Link Button -- Activities section -->
+                <div class="d-flex justify-content-center">
+                    <a href="#"></a>
+                    <button class="btn btn-primary btn-learn_more">
+                        En savoir plus <i class="fas fa-long-arrow-alt-right"> </i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Services part -->
+            <div class="text-container">
+                <h1>Nos services sur mesure</h1>
+                <p> L’ensemble des partenaires Colive’in seront à vos côtés pour vous accompagner au quotidien si vous
+                    en avez besoin. Notre promesse : vous apportez une <strong>prise en charge de qualité</strong> et
+                    une <strong>tranquillité d’esprit</strong> . Ces services peuvent bénéficier d’un crédit d’impôt.
+                </p>
+
+                <!-- list of services -- Services part -->
+                <ul class="d-flex flex-wrap justify-content-between">
+
+                    <!-- list item #01 -- Services part  -->
+                    <li class="item-list d-flex flex-row">
+                        <i aria-hidden="true" class="fas fa-broom fa-listing"></i>
+
+                        <div class="list-text d-flex flex-column ">
+                            <span class="list-title">Aide-ménagère</span>
+                            <span class="list-description">Nettoyage, repassage, lessive</span>
+                        </div>
+                    </li>
+
+                    <!-- list item #02 -- Services part  -->
+                    <li class="item-list d-flex flex-row">
+                        <i aria-hidden="true" class="fas fa-hands-helping fa-listing"></i>
+
+                        <div class="list-text d-flex flex-column ">
+                            <span class="list-title">Aide à l'autonomie</span>
+                            <span class="list-description">Aide au lever et au coucher, aide à la toilette, présence de
+                                nuit</span>
+                        </div>
+                    </li>
+
+                    <!-- list item #03 -- Services part  -->
+                    <li class="item-list d-flex flex-row">
+                        <i aria-hidden="true" class="fas fa-book fa-listing"></i>
+
+                        <div class="list-text d-flex flex-column ">
+                            <span class="list-title">
+                                Assistance administrative</span>
+                            <span class="list-description">Gestion du courrier, classement des documents, démarches
+                                administratives</span>
+                        </div>
+                    </li>
+
+                    <!-- list item #04 -- Services part -->
+                    <li class="item-list d-flex flex-row">
+                        <i aria-hidden="true" class="fas fa-user-friends fa-listing"></i>
+
+                        <div class="list-text d-flex flex-column ">
+                            <span class="list-title">Accompagnement</span>
+                            <span class="list-description">Courses, promenades, sorties culturelles</span>
+                        </div>
+                    </li>
+
+                    <!-- list item #05 -- Services part  -->
+                    <li class="item-list d-flex flex-row">
+                        <i aria-hidden="true" class="fas fa-utensils fa-listing"></i>
+
+                        <div class="list-text d-flex flex-column ">
+                            <span class="list-title">Aide aux repas</span>
+                            <span class="list-description">Courses et préparations des repas, aide à la prise des
+                                repas</span>
+                        </div>
+                    </li>
+
+                    <!-- list item #06 -- Services part -->
+                    <li class="item-list d-flex flex-row">
+                        <i aria-hidden="true" class="fas fa-syringe fa-listing"></i>
+
+                        <div class="list-text d-flex flex-column ">
+                            <span class="list-title">Coordination de soin</span>
+                            <span class="list-description">Visite infirmier, rdv de santé...</span>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- Offers part -->
+            <div class="text-container">
+                <h1>Découvrez les offres Colive'in</h1>
+                <p> Notre mission : rendre la colocation pour séniors autonomes <strong>accessible à tous</strong> !
+                </p>
+                <img class="offers-img" src="assets/images/others/brochure.png"
+                    alt="Brochure présentant les différentes offres de Colive'in">
+            </div>
+        </div>
+    </section>
+
+    <!-- Fourth index section  -- Fondators -->
+    <section class="service-section bg-uncolored">
+    </section>
 </body>
 
 </html>

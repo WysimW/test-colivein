@@ -1,11 +1,70 @@
+:root {
+    --primary-color: #edba95;
+    --primary-color-alpha: #EDBA95BA;
+    --secondary-color: #424542;
+    --nocolor: #fdf9f5;
+}
+
 body {
     font-family: Roboto;
+}
+
+section {
+    padding-bottom: 2em;
+}
+
+h1 {
+    font-family: Comfortaa;
+    font-weight: bold;
+}
+
+p {
+    text-align: justify;
+    color: var(--secondary-color);
+    font-family: "Roboto", Sans-serif;
+    font-weight: 400;
+}
+
+strong {
+    color: var(--secondary-color);
+    ;
+}
+
+.text-container {
+    padding: 48px 16px;
+}
+
+
+.btn-primary {
+    padding: 1em 2em 1em 2em;
+    line-height: 1;
+    font-family: Montserrat;
+    font-weight: 700;
+    background-color: var(--primary-color);
+    border: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.10rem;
+    border-radius: 100px;
+    width: 242px;
+    text-transform: uppercase;
+}
+
+.btn-learn_more {
+    width: 250px;
+}
+
+.btn-learn_more:hover {
+    color: var(--primary-color) !important;
+}
+
+.bg-uncolored {
+    background-color: var(--nocolor);
 }
 
 /* bg video */
 .video-container {
     position: relative;
-    height: 100vh;
+    height: 110vh;
 }
 
 .video-container video {
@@ -23,6 +82,7 @@ body {
     bottom: 0;
     left: 0;
     background: rgba(255, 255, 255, 0.5);
+
 }
 
 /* navigation bar */
@@ -48,16 +108,114 @@ body {
     border-bottom: 1.5px solid;
 }
 
-.btn-primary {
-    padding: 1em 2em 1em 2em;
-    line-height: 1;
-    font-family: Montserrat;
+
+.btn-primary:hover {
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+/* Welcome section */
+.bg-colored {
+    background-color: var(--primary-color-alpha);
+}
+
+@media (min-width: 1200px) {
+    .welcome-section {
+        position: absolute;
+        padding-bottom: 4em;
+        width: 100%;
+        bottom: -10vh;
+        z-index: 2;
+    }
+}
+
+.welcome-section h1 {
+    font-size: 1.4rem;
+    line-height: 1.1em;
+    margin-bottom: 1em;
+}
+
+#strong-together {
+    font-size: 1.4rem;
+}
+
+/* House section */
+
+.house-section h1 {
+    font-size: 2em;
     font-weight: 700;
-    background-color: #edba95;
-    border: #edba95;
-    color: #424542;
-    font-size: 1.10rem;
-    border-radius: 100px;
-    ;
-    width: 242px;
+    margin-left: -2px;
+}
+
+.house-section .text-container {
+    padding-top: 0.2em;
+    padding-bottom: 1em;
+}
+
+.card-container {
+    padding: 10px;
+}
+
+.card {
+    border-radius: 50px;
+    border: none;
+    margin: 0 1em 2em;
+    width: 331px !important;
+}
+
+.card-img-top {
+    border-radius: 50px 50px 0 0;
+}
+
+.card-text {
+    color: var(--secondary-color);
+    font-family: "Comfortaa", Sans-serif;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.3px;
+    stroke-width: 0.3px;
+    -webkit-text-stroke-color: var(--secondary-color);
+    stroke: var(--secondary-color);
+    text-align: center;
+}
+
+/* Service section */
+
+.item-list {
+    margin-bottom: 1em;
+    width: 45%;
+}
+
+.fa-listing {
+    font-size: 50px;
+    color: var(--primary-color);
+}
+
+.list-text {
+    margin-left: 1em;
+}
+
+.list-title {
+    font-family: "Comfortaa", Sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.list-description {
+    color: var(--secondary-color);
+    font-family: "Roboto", Sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.service-section ul {
+    margin: 3em 0;
+}
+
+.service-section h1 {
+    size: 2em;
+}
+
+.offers-img {
+    width: 100%;
 }
