@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body class="d-flex flex-column">
 
     <!-- Video in backgrounbd integration -->
     <div class="video-container">
@@ -64,10 +64,8 @@
                 </nav>
             </div>
         </header>
-    </div>
-
-    <!-- First index section  -- Welcome -->
-    <section class="welcome-section bg-colored">
+            <!-- First index section  -- Welcome -->
+    <section class="welcome-section bg-colored-alpha">
         <div class="container">
             <div class="text-container">
                 <h1 class="h1">Bienvenue dans nos maisons partagées pour séniors autonomes</h1>
@@ -83,13 +81,16 @@
             </div>
         </div>
     </section>
+    </div>
+
+
 
     <!-- Second index section  -- House -->
     <section class="house-section bg-colored">
         <div class="container">
             <!-- Intro text -- House section -->
             <div class="text-container">
-                <h1 class="h1-house-section">
+                <h1 class="h1">
                     Des maisons pensées pour vous
                 </h1>
                 <p>
@@ -173,7 +174,7 @@
                 <ul class="d-flex flex-wrap justify-content-between">
 
                     <!-- list item #01 -- Activities part-->
-                    <li class="item-list d-flex flex-row">
+                    <li class="service-list-item d-flex flex-row">
                         <i aria-hidden="true" class="fas fa-heart fa-listing"></i>
 
                         <div class="list-text d-flex flex-column ">
@@ -183,7 +184,7 @@
                     </li>
 
                     <!-- list item #02 -- Activities part -->
-                    <li class="item-list d-flex flex-row">
+                    <li class="service-list-item d-flex flex-row">
                         <i aria-hidden="true" class="fas fa-heartbeat fa-listing"></i>
 
                         <div class="list-text d-flex flex-column ">
@@ -193,7 +194,7 @@
                     </li>
 
                     <!-- list item #03 -- Activities part-->
-                    <li class="item-list d-flex flex-row">
+                    <li class="service-list-item d-flex flex-row">
                         <i aria-hidden="true" class="fas fa-hand-paper fa-listing"></i>
 
                         <div class="list-text d-flex flex-column ">
@@ -203,7 +204,7 @@
                     </li>
 
                     <!-- list item #04 -- Activities part -->
-                    <li class="item-list d-flex flex-row">
+                    <li class="service-list-item d-flex flex-row">
                         <i aria-hidden="true" class="fas fa-landmark fa-listing"></i>
 
                         <div class="list-text d-flex flex-column ">
@@ -234,7 +235,7 @@
                 <ul class="d-flex flex-wrap justify-content-between">
 
                     <!-- list item #01 -- Services part  -->
-                    <li class="item-list d-flex flex-row">
+                    <li class="service-list-item d-flex flex-row">
                         <i aria-hidden="true" class="fas fa-broom fa-listing"></i>
 
                         <div class="list-text d-flex flex-column ">
@@ -244,7 +245,7 @@
                     </li>
 
                     <!-- list item #02 -- Services part  -->
-                    <li class="item-list d-flex flex-row">
+                    <li class="service-list-item d-flex flex-row">
                         <i aria-hidden="true" class="fas fa-hands-helping fa-listing"></i>
 
                         <div class="list-text d-flex flex-column ">
@@ -255,7 +256,7 @@
                     </li>
 
                     <!-- list item #03 -- Services part  -->
-                    <li class="item-list d-flex flex-row">
+                    <li class="service-list-item d-flex flex-row">
                         <i aria-hidden="true" class="fas fa-book fa-listing"></i>
 
                         <div class="list-text d-flex flex-column ">
@@ -267,7 +268,7 @@
                     </li>
 
                     <!-- list item #04 -- Services part -->
-                    <li class="item-list d-flex flex-row">
+                    <li class="service-list-item d-flex flex-row">
                         <i aria-hidden="true" class="fas fa-user-friends fa-listing"></i>
 
                         <div class="list-text d-flex flex-column ">
@@ -277,7 +278,7 @@
                     </li>
 
                     <!-- list item #05 -- Services part  -->
-                    <li class="item-list d-flex flex-row">
+                    <li class="service-list-item d-flex flex-row">
                         <i aria-hidden="true" class="fas fa-utensils fa-listing"></i>
 
                         <div class="list-text d-flex flex-column ">
@@ -288,7 +289,7 @@
                     </li>
 
                     <!-- list item #06 -- Services part -->
-                    <li class="item-list d-flex flex-row">
+                    <li class="service-list-item d-flex flex-row">
                         <i aria-hidden="true" class="fas fa-syringe fa-listing"></i>
 
                         <div class="list-text d-flex flex-column ">
@@ -312,7 +313,77 @@
     </section>
 
     <!-- Fourth index section  -- Fondators -->
-    <section class="service-section bg-uncolored">
+    <section class="fondators-section bg-uncolored">
+        <div class="container">
+            <h1>Les fondateurs</h1>
+
+            <!-- Circles -- Fondators section-->
+            <div class="fondators d-flex justify-content-center">
+
+                <!-- First Circles -- Fondators section-->
+                <div class="outer-circle circle-color-one">
+                    <h2 class="circle-title">Tony</h2>
+                    <div class="inner-circle">
+                        <img src="assets/images/fondators/Tony.jpeg" alt="photo du fondateur Tony">
+                    </div>
+                </div>
+
+                <!-- Second Circles -- Fondators section-->
+                <div class="outer-circle circle-color-two">
+                    <h2 class="circle-title">Enzo</h2>
+                    <div class="inner-circle">
+                        <img src="assets/images/fondators/Enzo.jpeg" alt="photo du fondateur Enzo">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="#"></a>
+                <button class="btn btn-primary btn-history">
+                    Découvrir notre histoire <i class="fas fa-long-arrow-alt-right"> </i>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Fifth index section  -- Partners -->
+    <section class="partners-section bg-white">
+        <div class="container">
+            <h1>Ils nous font confiance</h1>
+
+                <ul class="d-flex justify-content-start logo-gallery">
+                    <li class="partners-list-item p-2">
+                        <img class="partners-logo" src="assets/images/partners/KOVAN-LOGO-VERT3.png" alt="Logo de l'entreprise Kovan">
+                    </li>
+                    <li class="partners-list-item p-2">
+                        <img class="partners-logo" src="assets/images/partners/LOGO_MBS_RVB-1.png" alt="Logo de l'entreprise Kovan">
+                    </li>
+                    <li class="partners-list-item p-2">
+                        <img class="partners-logo" src="assets/images/partners/superprof-logo.png" alt="Logo de l'entreprise Kovan">
+                    </li>
+                </ul>
+
+                <div class="engagement-circle">
+                    <div class="engagement-circle-content">
+                       Profitez de 2 mois sans engagement
+                    </div>
+                </div>
+        
+        </div>
+        
+        
+    </section>
+    <!-- Sixth index section  -- Join -->
+    <section class="partners-section bg-transparant">
+        <div class="container">
+            <h1>Ils nous font confiance</h1>
+
+
+        
+        </div>
+        
+        
     </section>
 </body>
 

@@ -2,16 +2,39 @@
     --primary-color: #edba95;
     --primary-color-alpha: #EDBA95BA;
     --secondary-color: #424542;
+    --circle-color-one : #edba953a;
+    --circle-color-two : #edba9596;
     --nocolor: #fdf9f5;
+    --circle-color-three: #F7E1D3;
 }
+
 
 body {
     font-family: Roboto;
+    position: relative;
+    background-image: url('assets/images/others/pret-nous-rej.jpeg');
+    background-position:top; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: cover;
 }
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
 
 section {
     padding-bottom: 2em;
+
 }
+
 
 h1 {
     font-family: Comfortaa;
@@ -28,6 +51,10 @@ p {
 strong {
     color: var(--secondary-color);
     ;
+}
+
+ul {
+    padding : 0px;
 }
 
 .text-container {
@@ -57,8 +84,20 @@ strong {
     color: var(--primary-color) !important;
 }
 
+.bg-colored {
+    background-color: var(--primary-color);
+}
+
+.bg-colored-alpha {
+    background-color: var(--primary-color-alpha);
+}
+
 .bg-uncolored {
     background-color: var(--nocolor);
+}
+
+.bg-white {
+    background-color: white;
 }
 
 /* bg video */
@@ -115,16 +154,14 @@ strong {
 }
 
 /* Welcome section */
-.bg-colored {
-    background-color: var(--primary-color-alpha);
-}
+
 
 @media (min-width: 1200px) {
     .welcome-section {
         position: absolute;
         padding-bottom: 4em;
         width: 100%;
-        bottom: -10vh;
+        bottom: 0;
         z-index: 2;
     }
 }
@@ -140,6 +177,11 @@ strong {
 }
 
 /* House section */
+.house-section {
+position: relative;
+z-index: 3;
+
+}
 
 .house-section h1 {
     font-size: 2em;
@@ -180,8 +222,9 @@ strong {
 
 /* Service section */
 
-.item-list {
-    margin-bottom: 1em;
+.service-list-item {
+
+    padding: 10px;
     width: 45%;
 }
 
@@ -218,4 +261,117 @@ strong {
 
 .offers-img {
     width: 100%;
+}
+
+/* Fontator section */
+.fondators-section h1 {
+    color: var(--secondary-color);
+    font-family: "Comfortaa", Sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.outer-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+.circle-color-one {
+    background-color: var(--circle-color-one);
+    margin-right: -25px;
+}
+
+.circle-color-two {
+    background-color: var(--circle-color-two);
+    margin-left: -25px;
+}
+
+.circle-title {
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    width: 100%;
+    font-family: Comfortaa;
+    font-size: 32px;
+    color: var(--secondary-color);
+    z-index: 1;
+}
+
+.inner-circle {
+    width: 186px;
+    height: 186px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: transparent;
+    
+}
+
+.inner-circle img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.btn-history {
+    width: 370px;
+    margin-top: 3em;
+}
+
+/* Partners section */
+.partners-section {
+    position: relative;
+}
+
+.partners-section h1 {
+    color: var(--secondary-color);
+    font-family: "Comfortaa", Sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.partners-list-item {
+    height: 100px;
+    width: auto;
+    padding: 0px !important;
+    margin-right: 64px;
+}
+
+.partners-logo {
+    height: 100%;
+}
+
+.engagement-circle {
+    position: absolute;
+    bottom: -50%;
+    right: 5%;
+    width: 245px; 
+    height: 245px;
+    border-radius: 50%;
+    background-color: var(--circle-color-three); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.engagement-circle-content {
+    padding: 30px;
+    text-align: center;
+    color: var( --secondary-color );
+    font-family: "Roboto", Sans-serif;
+    font-weight: 600;
+    line-height: 1.3em;
+    font-size: 19px;
+    transform : rotate(7deg);
 }
