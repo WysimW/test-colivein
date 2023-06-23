@@ -2,8 +2,8 @@
     --primary-color: #edba95;
     --primary-color-alpha: #EDBA95BA;
     --secondary-color: #424542;
-    --circle-color-one : #edba953a;
-    --circle-color-two : #edba9596;
+    --circle-color-one: #edba953a;
+    --circle-color-two: #edba9596;
     --nocolor: #fdf9f5;
     --circle-color-three: #F7E1D3;
 }
@@ -13,20 +13,18 @@ body {
     font-family: Roboto;
     position: relative;
     background-image: url('assets/images/others/pret-nous-rej.jpeg');
-    background-position:top; 
-    background-repeat: no-repeat; 
+    background-position: top;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
-body::after {
-    content: '';
+.bg-overlay {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    background: rgba(83, 83, 83, 0.726);
+    z-index: -5;
 }
 
 
@@ -54,7 +52,7 @@ strong {
 }
 
 ul {
-    padding : 0px;
+    padding: 0px;
 }
 
 .text-container {
@@ -178,8 +176,8 @@ ul {
 
 /* House section */
 .house-section {
-position: relative;
-z-index: 3;
+    position: relative;
+    z-index: 3;
 
 }
 
@@ -313,7 +311,7 @@ z-index: 3;
     align-items: center;
     border-radius: 50%;
     background-color: transparent;
-    
+
 }
 
 .inner-circle img {
@@ -323,6 +321,11 @@ z-index: 3;
 }
 
 .btn-history {
+    width: 370px;
+    margin-top: 3em;
+}
+
+.fondators-section .btn {
     width: 370px;
     margin-top: 3em;
 }
@@ -352,26 +355,371 @@ z-index: 3;
     height: 100%;
 }
 
+
+
+/* Join section */
+.join-section {
+    position: relative;
+    padding: 12em 0;
+}
+
 .engagement-circle {
     position: absolute;
-    bottom: -50%;
+    top: -125px;
     right: 5%;
-    width: 245px; 
+    width: 245px;
     height: 245px;
     border-radius: 50%;
-    background-color: var(--circle-color-three); 
+    background-color: var(--circle-color-three);
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 5;
 }
 
 .engagement-circle-content {
     padding: 30px;
     text-align: center;
-    color: var( --secondary-color );
+    color: var(--secondary-color);
     font-family: "Roboto", Sans-serif;
     font-weight: 600;
     line-height: 1.3em;
     font-size: 19px;
-    transform : rotate(7deg);
+    transform: rotate(7deg);
+}
+
+
+.join-section h1 {
+    color: white;
+    font-family: "Comfortaa", Sans-serif;
+    font-size: 3.5em;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+.join-section .btn {
+    width: 336px;
+    margin-top: 3em;
+}
+
+/* Footer section */
+.footer-section {
+    padding: 3em 0;
+}
+
+.phone-number {
+    margin: 1em 0 3.5em;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 1em;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 7px;
+}
+
+.icon-circle-content {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.footer-link {
+    font-family: Comfortaa;
+    font-weight: 700;
+    color: var(--secondary-color);
+    fill: var(--secondary-color);
+
+    text-decoration: none;
+}
+
+.footer-list-item {
+    padding: 10px 0px;
+    margin-left: 15px;
+}
+
+.ending {
+    margin-top: auto;
+}
+
+/* Cookie consent section */
+.cookie-consent-element {
+    position: fixed;
+    bottom: -50px;
+    right: 30px;
+    background-color: var(--nocolor);
+    width: 190px;
+    height: 70px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px 5px;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.cookie-consent-element:hover {
+    bottom: -20px;
+}
+
+.cookie-popup-element {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 526px;
+    height: 260px;
+    padding: 15px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cookie-popup-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+}
+
+.cookie-popup-title {
+    text-align: center;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    overflow: visible;
+    justify-self: center;
+    align-self: center;
+    font-size: 15px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.cookie-popup-cross-icon {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    justify-self: end;
+    align-self: flex-start;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.cookie-popup-text {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    font-size: 12px;
+    margin-bottom: 2em;
+}
+
+.cookie-popup-button {
+    grid-row: 3 / 4;
+    width: 154px;
+    height: 45px;
+    font-size: 15px;
+    overflow: visible;
+    white-space: nowrap;
+    border: transparent;
+    color: black;
+    font-weight: 500;
+}
+
+.btn1 {
+    margin-right: auto;
+    background-color: var(--primary-color);
+    border: 1px solid #f2f2f2;
+}
+
+.btn2 {
+    margin: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #f2f2f2;
+}
+
+.btn3 {
+    margin-left: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #f2f2f2;
+}
+
+.cookie-popup-button:nth-child(4) {
+    grid-column: 1 / 2;
+}
+
+.cookie-popup-button:nth-child(5) {
+    grid-column: 2 / 3;
+}
+
+.cookie-popup-button:nth-child(6) {
+    grid-column: 3 / 4;
+}
+
+.cookie-popup-link {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 12px;
+    text-decoration: underline;
+    margin-top: 1.5em;
+}
+
+.display-none {
+    display: none;
+}
+
+.cookie-popup-element-two {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 526px;
+    padding: 15px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cookie-popup-grid-container-two {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, auto);
+}
+
+.cookie-popup-button-two {
+    grid-row: 6;
+    height: 45px;
+    font-size: 15px;
+    overflow: visible;
+    white-space: nowrap;
+    border: transparent;
+    color: black;
+    font-weight: 500;
+}
+
+
+.btn4 {
+    margin-right: auto;
+    background-color: var(--primary-color);
+    border: 1px solid #f2f2f2;
+    width: 125px;
+    grid-column: 1 / 2;
+}
+
+.btn5 {
+    margin: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #f2f2f2;
+    width: 125px;
+    grid-column: 2 / 3;
+}
+
+.btn6 {
+    margin-left: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #f2f2f2;
+    width: 200px;
+    grid-column: 3 / 4;
+}
+
+.cookie-popup-link-two {
+    grid-column: 2 / 3;
+    grid-row: 7;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 12px;
+    text-decoration: underline;
+    margin-top: 1.5em;
+}
+
+.cookie-popup-function {
+    grid-row: 3;
+    grid-column: 1 / -1;
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.cookie-popup-function-name {
+    color: #222222;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cookie-popup-function-state {
+    color: #008000;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.cookie-popup-function .fa {
+    font-size: 30px;
+}
+
+.accordion-content {
+    margin-top: 1em;
+    font-size: 12px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-content.show {
+    max-height: 100vh;
+    /* ou tout autre valeur selon votre besoin */
+}
+
+.accordion-arrow {
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.function-accordion-arrow.up, .stats-accordion-arrow.up, .market-accordion-arrow.up {
+    transform: rotate(180deg);
+}
+
+.cookie-popup-stats {
+    grid-row: 4;
+    grid-column: 1 / -1;
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.cookie-popup-market {
+    grid-row: 5;
+    grid-column: 1 / -1;
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.form-check-input {
+    background-color: #f56e28;
+    width: 35px !important;
+	height: 20px;
+
+}
+
+/* Change la couleur de fond lorsque le switch est activé */
+.form-check-input:checked {
+    background-color: #edba95;  /* couleur de fond lorsque le switch est activé */
+}
+.form-check-input::before {
+    background-color: white !important;  /* Remplacez #f00 par la couleur que vous voulez */
+}
+
+/* Change la couleur du bouton du switch */
+.form-check-input::after {
+    background-color: white !important;  /* couleur du bouton du switch */
 }
