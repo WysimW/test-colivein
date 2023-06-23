@@ -45,7 +45,8 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <!-- Internal link -->
-                            <ul class="navbar-nav ms-auto align-items-center">
+                            <ul class="navbar-nav ms-auto align-items-center" id="test">
+                                <div class="burger-cross-icon"><i class="fa fa-times"></i></div>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Nos Maisons</a>
                                 </li>
@@ -56,7 +57,7 @@
                                     <a class="nav-link" href="#">Nos histoires</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="btn btn-primary">Demande de brochure</a>
+                                    <a class="btn btn-primary btn-nav">Demande de brochure</a>
                                 </li>
                             </ul>
                         </div>
@@ -65,7 +66,7 @@
             </div>
         </header>
         <!-- First index section  -- Welcome -->
-        <section class="welcome-section bg-colored-alpha">
+        <section class="welcome-section-lg bg-colored-alpha">
             <div class="container">
                 <div class="text-container">
                     <h1 class="h1">Bienvenue dans nos maisons partagées pour séniors autonomes</h1>
@@ -79,11 +80,30 @@
                     <p> Nous sommes convaincus que les relations humaines et le maintien de l’autonomie sont le ciment
                         d’une
                         retraite épanouie et dynamique.</p>
-                    <strong id="strong-together">Ensemble, vivons une seconde jeunesse ?</strong>
+                    <strong class="strong-together">Ensemble, vivons une seconde jeunesse ?</strong>
                 </div>
             </div>
         </section>
     </div>
+
+    <section class="welcome-section-sm bg-colored">
+        <div class="container">
+            <div class="text-container">
+                <h1 class="h1">Bienvenue dans nos maisons partagées pour séniors autonomes</h1>
+                <p>Chez Colive’in on vit en parfaite autonomie dans des maisons familiales typiques de leurs
+                    régions,
+                    proche
+                    de toutes commodités (pharmacie, transport en commun…) <strong>regroupant 4 à 6 personnes par
+                        affinités</strong>
+                    souhaitant partager leur retraite sous le signe de la convivialité !</p>
+
+                <p> Nous sommes convaincus que les relations humaines et le maintien de l’autonomie sont le ciment
+                    d’une
+                    retraite épanouie et dynamique.</p>
+                <strong class="strong-together">Ensemble, vivons une seconde jeunesse ?</strong>
+            </div>
+        </div>
+    </section>
 
     <!-- Second index section  -- House -->
     <section class="house-section bg-colored">
@@ -352,7 +372,7 @@
         <div class="container">
             <h1>Ils nous font confiance</h1>
 
-            <ul class="d-flex justify-content-start logo-gallery">
+            <ul class="d-flex justify-content-start logo-gallery flex-wrap">
                 <li class="partners-list-item p-2">
                     <img class="partners-logo" src="assets/images/partners/KOVAN-LOGO-VERT3.png"
                         alt="Logo de l'entreprise Kovan">
@@ -457,6 +477,9 @@
     <!-- Background Overlay -- Needed to bg image opacity -->
     <div class="bg-overlay"></div>
 
+    <!-- Background Overlay 2 -- Needed to bg bg opacity in burger-menu-->
+    <div class="bg-overlay-burger display-none"></div>
+
     <!-- Cookie consent Fixed Element -- Button -->
     <div class="cookie-consent-element">Gérer le consentement</div>
 
@@ -519,7 +542,7 @@
             <div class="cookie-popup-market d-flex flex-wrap align-items-center">
                 <span class="cookie-popup-function-name flex-grow-1">Marketing</span> 
                 <span class="cookie-popup-function-state"><div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" size="40">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault2" size="40">
                   </div></span>
                 <span class="market-accordion-btn market-accordion-arrow accordion-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg></span>
                 <div class="accordion-content display-none">
@@ -537,6 +560,7 @@
     </div>
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/cookie-popup.js"></script>
+    <script src="assets/js/burger-menu.js"></script>
 </body>
 
 </html>

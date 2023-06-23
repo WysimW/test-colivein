@@ -99,9 +99,18 @@ ul {
 }
 
 /* bg video */
-.video-container {
-    position: relative;
-    height: 110vh;
+@media (min-width: 1024px) {
+    .video-container {
+        position: relative;
+        height: 110vh;
+    }
+}
+
+@media (min-width : 321px) and (max-width: 1024px) {
+    .video-container {
+        position: relative;
+        height: 50vh;
+    }
 }
 
 .video-container video {
@@ -151,16 +160,94 @@ ul {
     background-color: var(--secondary-color);
 }
 
+.burger-cross-icon {
+    display: none;
+}
+
+.bg-overlay-burger {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.747);
+    z-index: 14;
+}
+
+@media (min-width : 321px) and (max-width: 1024px) {
+    header .show {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 90%;
+        background-color: #fdf9f5;
+        display: flex;
+        align-items: center;
+        z-index: 15;
+    }
+
+    .ms-auto {
+        margin-left: 0 !important;
+    }
+
+
+    header .navbar-collapse .align-items-center {
+        align-items: flex-start !important;
+    }
+
+    header ul {
+        margin-left: 0 !important;
+        display: flex;
+    }
+
+    header ul li {
+        margin-left: 1em;
+    }
+
+    .nav-link {
+        font-size: 1.2em;
+    }
+
+    .btn-nav {
+        width: auto;
+        height: auto;
+        font-size: 16px;
+        color: var(--nocolor);
+    }
+
+    .burger-cross-icon {
+        font-size: 25px;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        display: inline-block;
+    }
+}
+
 /* Welcome section */
 
 
-@media (min-width: 1200px) {
-    .welcome-section {
+@media (min-width: 1024px) {
+    .welcome-section-lg {
         position: absolute;
         padding-bottom: 4em;
         width: 100%;
         bottom: 0;
         z-index: 2;
+    }
+
+    .welcome-section-sm {
+        display: none;
+    }
+}
+
+@media (min-width : 321px) and (max-width: 1024px) {
+    .welcome-section-lg {
+        display: none
+    }
+
+    .welcome-section-sm {
+        padding-bottom: 4em;
+        width: 100%;
     }
 }
 
@@ -170,7 +257,7 @@ ul {
     margin-bottom: 1em;
 }
 
-#strong-together {
+.strong-together {
     font-size: 1.4rem;
 }
 
@@ -196,11 +283,23 @@ ul {
     padding: 10px;
 }
 
-.card {
-    border-radius: 50px;
-    border: none;
-    margin: 0 1em 2em;
-    width: 331px !important;
+@media (min-width : 1024px) {
+    .card {
+        border-radius: 50px;
+        border: none;
+        margin: 0 1em 2em;
+        width: 331px !important;
+    }
+}
+
+@media (min-width : 321px) and (max-width: 1024px) {
+    .card {
+
+        border-radius: 50px;
+        border: none;
+        margin: 0 auto 1em;
+        width: 331px !important;
+    }
 }
 
 .card-img-top {
@@ -220,10 +319,20 @@ ul {
 
 /* Service section */
 
-.service-list-item {
+@media (min-width : 768px) {
+    .service-list-item {
 
-    padding: 10px;
-    width: 45%;
+        padding: 10px;
+        width: 45%;
+    }
+}
+
+@media (min-width : 321px) and (max-width: 768px) {
+    .service-list-item {
+
+        padding: 10px;
+        width: 100%;
+    }
 }
 
 .fa-listing {
@@ -345,14 +454,15 @@ ul {
 }
 
 .partners-list-item {
-    height: 100px;
-    width: auto;
+    width: 25%;
     padding: 0px !important;
     margin-right: 64px;
+    box-sizing: border-box;
 }
 
 .partners-logo {
-    height: 100%;
+    width: 100%;
+
 }
 
 
@@ -684,7 +794,9 @@ ul {
     cursor: pointer;
 }
 
-.function-accordion-arrow.up, .stats-accordion-arrow.up, .market-accordion-arrow.up {
+.function-accordion-arrow.up,
+.stats-accordion-arrow.up,
+.market-accordion-arrow.up {
     transform: rotate(180deg);
 }
 
@@ -707,19 +819,23 @@ ul {
 .form-check-input {
     background-color: #f56e28;
     width: 35px !important;
-	height: 20px;
+    height: 20px;
 
 }
 
 /* Change la couleur de fond lorsque le switch est activé */
 .form-check-input:checked {
-    background-color: #edba95;  /* couleur de fond lorsque le switch est activé */
+    background-color: #edba95;
+    /* couleur de fond lorsque le switch est activé */
 }
+
 .form-check-input::before {
-    background-color: white !important;  /* Remplacez #f00 par la couleur que vous voulez */
+    background-color: white !important;
+    /* Remplacez #f00 par la couleur que vous voulez */
 }
 
 /* Change la couleur du bouton du switch */
 .form-check-input::after {
-    background-color: white !important;  /* couleur du bouton du switch */
+    background-color: white !important;
+    /* couleur du bouton du switch */
 }
