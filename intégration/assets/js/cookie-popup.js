@@ -30,7 +30,7 @@ cross.forEach(function (element) {
 let validate = document.querySelectorAll('.validate')
 validate.forEach(function (element) {
   element.addEventListener('click', function () {
-    console.log('cross icon clicked!');
+    console.log('accept button clicked!');
     document.querySelector('.cookie-consent-element').classList.remove('display-none');
 
     document.querySelector('.cookie-popup-element').classList.add('display-none');
@@ -42,13 +42,23 @@ validate.forEach(function (element) {
 let decline = document.querySelectorAll('.decline')
 decline.forEach(function (element) {
   element.addEventListener('click', function () {
-    console.log('cross icon clicked!');
+    console.log('decline button clicked!');
     document.querySelector('.cookie-consent-element').classList.remove('display-none');
 
     document.querySelector('.cookie-popup-element').classList.add('display-none');
     document.querySelector('.cookie-popup-element-two').classList.add('display-none');
   });
 });
+
+/* Fake save */
+document.querySelector('.save').addEventListener('click', function () {
+  console.log('save button clicked!');
+  document.querySelector('.cookie-consent-element').classList.remove('display-none');
+
+  document.querySelector('.cookie-popup-element').classList.add('display-none');
+  document.querySelector('.cookie-popup-element-two').classList.add('display-none');
+
+})
 
 
 /* Accordion */
