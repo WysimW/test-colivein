@@ -1,4 +1,19 @@
-/* Variable declaration */
+/*
+Theme Name: Colive'in
+Author: Thomas Dupez
+Description: Thème pour un test de compétence
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: colive-in
+*/
+
+/* Variable declaration */*
+html, body {
+    margin: 0 !important;
+    padding: 0;
+}
+
 :root {
     --primary-color: #edba95;
     --primary-color-alpha: #EDBA95BA;
@@ -315,11 +330,7 @@ ul {
         border: none;
         margin: 0 1em 2em;
         width: 331px !important;
-        height: 200px !important;;
-    }
-
-    .card img {
-        height: 200px;
+        height: 277px !important;
     }
 }
 
