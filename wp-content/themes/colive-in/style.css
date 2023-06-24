@@ -173,7 +173,7 @@ ul {
 
 /* Navigation bar styles */
 .nav-item {
-    padding: 10px;
+    padding: 15px;
 }
 
 .nav-logo {
@@ -181,19 +181,33 @@ ul {
 }
 
 .nav-link {
-    padding: 13px 20px !important;
+    padding: 13px 25px !important;
     transition: 0.3s;
     box-sizing: border-box;
     border-bottom: 1.5px solid transparent;
     font-family: Comfortaa;
     font-size: 0.95em;
     font-weight: 700;
+    text-decoration: none;
 }
+
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
 
 .nav-link:hover {
     border-bottom: 1.5px solid;
 }
 
+.navbar {
+    margin-top: 15px;
+}
+
+header .btn {
+    margin-left: 10px;
+}
 
 .btn-primary:hover {
     color: white;

@@ -49,14 +49,8 @@
         <div class="container">
             <!-- Intro text -- House section -->
             <div class="text-container">
-                <h1 class="h1">
-                    Des maisons pensées pour vous
-                </h1>
-                <p>
-                    Nos maisons disposent de grands espaces communs et privatifs conçu pour <strong> préserver
-                        l’autonomie</strong>. Cette
-                    ambiance sereine et confortable vous permettra de passer de beaux moments d’échange entre amis
-                </p>
+                <?php $block_post = get_post(35);  
+                echo do_blocks($block_post->post_content); ?>
             </div>
 
             <!-- House cards -- House section -->
@@ -65,6 +59,9 @@
             $args = array(
                 'category_name' => 'maisons', // Changez ceci en fonction du nom de votre catégorie.
                 'posts_per_page' => 6, // Limite à 6 maisons.
+                'orderby' => 'meta_value_num', // Ordonner par date de publication.
+                'meta_key' => 'order_value', // Le nom du champ personnalisé.
+                'order' => 'ASC', // Dans l'ordre descendant, donc le plus récent en premier.
             );
 
             // Crée une nouvelle requête.
@@ -99,10 +96,10 @@
 
             <!-- Link Button -- House section -->
             <div class="d-flex justify-content-center">
-                <a href="#"></a>
+                <a href="<?php echo get_permalink( 39 ); ?>">
                 <button class="btn btn-primary btn-learn_more">
                     En savoir plus <i class="fas fa-long-arrow-alt-right"> </i>
-                </button>
+                </button></a>
             </div>
         </div>
 
@@ -343,6 +340,7 @@
     </section>
 
     <?php get_footer() ?>
+    
 </body>
 
 </html>
