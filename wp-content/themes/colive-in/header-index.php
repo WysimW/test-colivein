@@ -1,3 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<?php
+$theme_directory = get_template_directory_uri();
+?>
+
+<head>
+    <?php wp_head(); ?>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Colive'In - Collocation pour sénior autonome</title>
+</head>
+
+<body class="d-flex flex-column">
+  
   <!-- First index section -- Header -->
   <div class="video-container">
       <div class="video-overlay"></div>

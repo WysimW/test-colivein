@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-<?php
-$theme_directory = get_template_directory_uri();
-?>
-
-<head>
-    <?php wp_head(); ?>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Colive'In - Collocation pour sénior autonome</title>
-</head>
-
-<body class="d-flex flex-column">
-
     <?php get_header('index'); ?>
+
     <!-- First index section  -- Welcome -->
     <section class="welcome-section-lg bg-colored-alpha">
         <div class="container">
@@ -269,16 +253,15 @@ $theme_directory = get_template_directory_uri();
             <h1>Ils nous font confiance</h1>
 
             <?php
-            // Arguments pour la requête WP_Query
+            // WP_Query request arguments
             $args = array(
                 'post_type' => 'partners',
-                'posts_per_page' => -1, // Pour récupérer tous les posts
+                'posts_per_page' => -1, 
                 'meta_key' => 'order',
                 'orderby' => 'meta_value',
                 'order' => 'ASC'
             );
 
-            // La boucle WP_Query
             $the_query = new WP_Query($args);
 
             if ($the_query->have_posts()) {
@@ -290,7 +273,6 @@ $theme_directory = get_template_directory_uri();
                         $logo = get_field('logo');
                         $partner_name = get_field('partner_name');
                     ?>
-                        <!-- Remplacer le HTML statique par des variables PHP -->
                         <li class="partners-list-item p-2">
                             <img class="partners-logo" src="<?php echo $logo['url']; ?>" alt="Logo de l'entreprise <?php echo $partner_name; ?>">
                         </li>
@@ -299,15 +281,10 @@ $theme_directory = get_template_directory_uri();
                     ?>
                 </ul>
             <?php
-                /* Remettre les données de requête à la normale */
                 wp_reset_postdata();
             } else {
-                // Pas de posts trouvés
             }
             ?>
-
-
-
 
         </div>
 
