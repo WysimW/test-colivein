@@ -414,6 +414,11 @@ header .btn {
     font-weight: 400;
 }
 
+.list-image {
+width: 90%;
+border-radius: 25px;
+}
+
 .service-section ul {
     margin: 3em 0;
 }
@@ -875,8 +880,7 @@ header .btn {
 }
 
 /* Our Houses page */
-.bg-image-houses {
-    background-image: url(assets/images/house/bg-ourhouses.jpg);
+.bg-image {
     height: 480px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -892,6 +896,11 @@ header .btn {
 }
 
 .ourhouses-list-item {
+    margin-bottom: 1.5em;
+}
+
+.ouractivites-list-item {
+    width: 50%;
     margin-bottom: 1.5em;
 }
 
