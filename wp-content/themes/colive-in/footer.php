@@ -1,4 +1,27 @@
-   <!-- Last index section  -- Footer -->
+       <!-- Footer section  -- Join -->
+       <section class="join-section bg-transparant">
+        <div class="engagement-circle">
+            <div class="engagement-circle-content">
+                Profitez de 2 mois sans engagement
+            </div>
+        </div>
+        <div class="container">
+
+            <h1>Prêt(e) à nous rejoindre ?</h1>
+            <div class="d-flex justify-content-center">
+                <a href="#"></a>
+                <button class="btn btn-primary">
+                    Demande de brochure <i class="fas fa-long-arrow-alt-right"> </i>
+                </button>
+            </div>
+
+
+        </div>
+
+
+    </section>
+   
+   <!-- Last section  -- Footer -->
    <footer class="bg-colored">
        <div class="container d-flex justify-content-between footer-section flex-wrap">
            <ul>
