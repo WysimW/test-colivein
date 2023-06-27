@@ -21,9 +21,14 @@ get_header(); ?>
 
     </div>
 </section>
-<section class="ourhouse-whychoseus-section bg-white">
+<section class="ourhouse-whychoseus-section bg-uncolored">
     <div class="container">
-        <h1>"Vivre ensemble"</h1>
+        <?php
+        $block_post = get_post(197);
+        echo '<h1>' . get_the_title($block_post) . '</h1>';
+        echo do_blocks($block_post->post_content);
+        ?>
+
 
         <ul class="d-flex flex-row flex-wrap align-items-center">
             <?php
@@ -66,12 +71,36 @@ get_header(); ?>
     </div>
 </section>
 
-<!-- Third Our Houses Section - Brochure -->
-<section class="ourhouse-brochure-section bg-white">
+<!-- Third Our Houses Section - Messages -->
+<section class="ouractivities-messages-section bg-white">
     <div class="container">
-        <?php $block_post = get_post(157);
-        echo do_blocks($block_post->post_content); ?>
-    </div>
+
+        <div>
+            <div class="d-flex text-center">
+                <div>
+                    <?php
+                    $block_post = get_post(200);
+                    echo '<h1>' . get_the_title($block_post) . '</h1>';
+                    echo do_blocks($block_post->post_content);
+                    ?>
+                </div>
+                <div>
+                    <?php
+                    $block_post = get_post(202);
+                    echo '<h1>' . get_the_title($block_post) . '</h1>';
+                    echo do_blocks($block_post->post_content);
+                    ?>
+                </div>
+
+            </div>
+            <div class="ouractivities-strong-endmessages">
+            <?php
+            $block_post = get_post(204);
+            echo do_blocks($block_post->post_content);
+            ?>
+            </div>
+        </div>
+
     </div>
 
 </section>

@@ -912,3 +912,11 @@ border-radius: 25px;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.ouractivities-messages-section p {
+    text-align: center;
+}
+
+.ouractivities-strong-endmessages{
+    margin-top:1em
+}

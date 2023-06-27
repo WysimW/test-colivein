@@ -1,14 +1,14 @@
 <?php
 /* Template Name: Nos Maison templates */
 $bg_image_url = get_field('bg_url');
-get_header(); 
+get_header();
 ?>
 
 
 
 <section class="page-description-section bg-colored">
-    <?php if($bg_image_url) : ?>
-    <div class="bg-image" style="background-image: url(<?php echo $bg_image_url ?>);" ></div>
+    <?php if ($bg_image_url) : ?>
+        <div class="bg-image" style="background-image: url(<?php echo $bg_image_url ?>);"></div>
     <?php endif; ?>
     <div class="container">
         <?php
@@ -23,7 +23,11 @@ get_header();
 </section>
 <section class="ourhouse-whychoseus-section bg-white">
     <div class="container">
-        <h1>Pourquoi choisir Colive'in ?</h1>
+        <?php
+        $block_post = get_post(186);
+        echo '<h1>' . get_the_title($block_post) . '</h1>';
+        echo do_blocks($block_post->post_content);
+        ?>
 
         <ul class="d-flex flex-column align-items-center">
             <?php
@@ -60,14 +64,17 @@ get_header();
     </div>
 </section>
 
-  <!-- Third Our Houses Section - Brochure -->
-  <section class="ourhouse-brochure-section bg-white">
-        <div class="container">
-        <?php $block_post = get_post(157);
-                echo do_blocks($block_post->post_content); ?>
-            </div>
-        </div>
+<!-- Third Our Houses Section - Brochure -->
+<section class="ourhouse-brochure-section bg-white">
+    <div class="container">
+        <?php
+        $block_post = get_post(184);
+        echo '<h1>' . get_the_title($block_post) . '</h1>';
+        echo do_blocks($block_post->post_content);
+        ?>
+    </div>
 
-    </section>
+
+</section>
 
 <?php get_footer(); ?>

@@ -3,11 +3,11 @@
     <!-- First index section  -- Welcome -->
     <section class="welcome-section-lg bg-colored-alpha">
         <div class="container">
-            <?php $block_post = get_post(
-                6
-
-            );
-            echo do_blocks($block_post->post_content); ?>
+            <?php
+            $block_post = get_post(6);
+            echo '<h1>' . get_the_title($block_post) . '</h1>';
+            echo do_blocks($block_post->post_content);
+            ?>
         </div>
     </section>
     </div>
@@ -15,8 +15,11 @@
     <section class="welcome-section-sm bg-colored">
         <div class="container">
             <div class="text-container">
-                <?php $block_post = get_post(6);
-                echo do_blocks($block_post->post_content); ?>
+                <?php
+                $block_post = get_post(6);
+                echo '<h1>' . get_the_title($block_post) . '</h1>';
+                echo do_blocks($block_post->post_content);
+                ?>
             </div>
         </div>
     </section>
@@ -36,8 +39,11 @@
         <div class="container">
             <!-- Intro text -- House section -->
             <div class="text-container">
-                <?php $block_post = get_post(35);
-                echo do_blocks($block_post->post_content); ?>
+                <?php
+                $block_post = get_post(35);
+                echo '<h1>' . get_the_title($block_post) . '</h1>';
+                echo do_blocks($block_post->post_content);
+                ?>
             </div>
 
             <!-- House cards -- House section -->
@@ -79,8 +85,11 @@
 
             <!-- Activities part -->
             <div class="text-container">
-                <?php $block_post = get_post(86);
-                echo do_blocks($block_post->post_content); ?>
+                <?php
+                $block_post = get_post(86);
+                echo '<h1>' . get_the_title($block_post) . '</h1>';
+                echo do_blocks($block_post->post_content);
+                ?>
 
                 <!-- list of activities #01 -- Activities part -->
                 <ul class="d-flex flex-wrap justify-content-between">
@@ -137,8 +146,11 @@
 
             <!-- Services part -->
             <div class="text-container">
-                <?php $block_post = get_post(89);
-                echo do_blocks($block_post->post_content); ?>
+                <?php
+                $block_post = get_post(89);
+                echo '<h1>' . get_the_title($block_post) . '</h1>';
+                echo do_blocks($block_post->post_content);
+                ?>
 
                 <!-- list of services -- Services part -->
                 <ul class="d-flex flex-wrap justify-content-between">
@@ -187,8 +199,11 @@
 
             <!-- Offers part -->
             <div class="text-container">
-                <?php $block_post = get_post(91);
-                echo do_blocks($block_post->post_content); ?>
+                <?php
+                $block_post = get_post(91);
+                echo '<h1>' . get_the_title($block_post) . '</h1>';
+                echo do_blocks($block_post->post_content);
+                ?>
             </div>
         </div>
     </section>
@@ -196,7 +211,11 @@
     <!-- Fourth index section  -- Fondators -->
     <section class="fondators-section bg-uncolored">
         <div class="container">
-            <h1>Les fondateurs</h1>
+            <?php
+            $block_post = get_post(193);
+            echo '<h1>' . get_the_title($block_post) . '</h1>';
+            echo do_blocks($block_post->post_content);
+            ?>
 
             <!-- Circles -- Fondators section-->
 
@@ -250,13 +269,17 @@
     <!-- Fifth index section  -- Partners -->
     <section class="partners-section bg-white">
         <div class="container">
-            <h1>Ils nous font confiance</h1>
+            <?php
+            $block_post = get_post(195);
+            echo '<h1>' . get_the_title($block_post) . '</h1>';
+            echo do_blocks($block_post->post_content);
+            ?>
 
             <?php
             // WP_Query request arguments
             $args = array(
                 'post_type' => 'partners',
-                'posts_per_page' => -1, 
+                'posts_per_page' => -1,
                 'meta_key' => 'order',
                 'orderby' => 'meta_value',
                 'order' => 'ASC'
@@ -292,6 +315,6 @@
 
     <?php get_footer() ?>
 
-</body>
+    </body>
 
-</html>
+    </html>
