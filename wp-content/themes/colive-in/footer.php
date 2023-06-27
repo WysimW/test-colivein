@@ -1,4 +1,8 @@
-       <!-- Footer section  -- Join -->
+<?php 
+$contact = get_permalink('49');
+?>
+      
+      <!-- Footer section  -- Join -->
        <section class="join-section bg-transparant">
            <!-- Promotion message -- Footer join section -->
            <?php
@@ -44,10 +48,10 @@
                 ?>
                    <h1> <?php echo strip_tags($post->post_content); ?></h1>
                    <div class="d-flex justify-content-center">
-                       <a href="#"></a>
+                       <a href="<?= $contact ?>">
                        <button class="btn btn-primary">
                            Demande de brochure <i class="fas fa-long-arrow-alt-right"> </i>
-                       </button>
+                       </button></a>
                    </div>
                <?php
                 }
