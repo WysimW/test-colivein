@@ -1,99 +1,109 @@
   <!-- Last section  -- Footer -->
-  <footer class="bg-colored">
-      <div class="container d-flex justify-content-between footer-section flex-wrap">
-          <ul>
-              <?php
-                $args = array(
-                    'post_type' => 'footer',
-                    'title' => 'Informations de Pieds de page',
-                    'orderby' => 'date',
-                    'order' => 'DESC'
-                );
+  <footer class="bg-colored-heavy">
+           <div class="container d-flex justify-content-between footer-section flex-wrap">
+               <ul>
+                   <?php
+                    $args = array(
+                        'post_type' => 'footer',
+                        'title' => 'Informations de Pieds de page',
+                        'orderby' => 'date',
+                        'order' => 'DESC'
+                    );
 
-                // Faire la requête
-                $posts = get_posts($args);
-                $post = $posts[0];
+                    // Faire la requête
+                    $posts = get_posts($args);
+                    $post = $posts[0];
 
-                if (count($posts) > 0) {
+                    if (count($posts) > 0) {
 
-                    $logo_url = get_field('footer_logo');
-                    $address = get_field('footer_address');
-                    $city = get_field('footer_city');
-                    $phone_number = get_field('footer_phone');
-                    $footer_message = get_field('footer_message');
-                ?>
-                  <li> <img class="footer-logo" src="<?php echo $logo_url; ?>" alt="Colive'in logo"> </li>
-                  <li><?php echo $address; ?></li>
-                  <li><?php echo $city; ?></li>
-                  <li class="phone-number"><?php echo $phone_number; ?></li>
-                  <li><?php echo $footer_message; ?></li>
-              <?php
-                }
-                wp_reset_postdata();
-                ?>
-          </ul>
+                        $logo_url = get_field('footer_logo');
+                        $address = get_field('footer_address');
+                        $city = get_field('footer_city');
+                        $phone_number = get_field('footer_phone');
+                        $footer_message = get_field('footer_message');
+                    ?>
+                       <li> <img class="footer-logo" src="<?php echo $logo_url; ?>" alt="Colive'in logo"> </li>
+                       <li><?php echo $address; ?></li>
+                       <li><?php echo $city; ?></li>
+                       <li class="phone-number"><?php echo $phone_number; ?></li>
+                       <li><?php echo $footer_message; ?></li>
+                   <?php
+                    }
+                    wp_reset_postdata();
+                    ?>
+               </ul>
 
-          <ul class="d-flex flex-column align-items-end">
-              <li class=""> Suivez-nous sur les réseaux sociaux : </li>
-              <li>
-                  <ul class="d-flex justify-content-end">
-                      <?php
-                        // WP_Query request arguments
-                        $args = array(
-                            'post_type' => 'social-networks',
-                            'posts_per_page' => -1, // pour récupérer tous les posts
-                            'meta_key' => 'order',
-                            'orderby' => 'meta_value',
-                            'order' => 'ASC'
-                        );
+               <ul class="d-flex flex-column align-items-end">
+                   <li class=""> Suivez-nous sur les réseaux sociaux : </li>
+                   <li>
+                       <ul class="d-flex justify-content-end">
+                           <?php
+                            // WP_Query request arguments
+                            $args = array(
+                                'post_type' => 'social-networks',
+                                'posts_per_page' => -1, // pour récupérer tous les posts
+                                'meta_key' => 'order',
+                                'orderby' => 'meta_value',
+                                'order' => 'ASC'
+                            );
 
-                        // WP_Query loop
-                        $the_query = new WP_Query($args);
+                            // WP_Query loop
+                            $the_query = new WP_Query($args);
 
-                        if ($the_query->have_posts()) {
-                            // at least one post find
-                            while ($the_query->have_posts()) {
-                                $the_query->the_post();
-                                $url = get_field('network_url');
-                                $icone = get_field('network_icon');
+                            if ($the_query->have_posts()) {
+                                // at least one post find
+                                while ($the_query->have_posts()) {
+                                    $the_query->the_post();
+                                    $url = get_field('network_url');
+                                    $icone = get_field('network_icon');
+                            ?>
+                                   <li>
+                                       <a href="<?php echo $url; ?>">
+                                           <div class="icon-circle">
+                                               <div class="icon-circle-content">
+                                                   <i class="fab <?php echo $icone; ?>"></i>
+                                               </div>
+                                           </div>
+                                       </a>
+                                   </li>
+
+                           <?php
+                                }
+                                /* Reset data */
+                                wp_reset_postdata();
+                            } else {
+                                // No post
+                            } ?>
+
+                       </ul>
+                   </li>
+                   <li class="ending">
+                       <?php
+                        wp_nav_menu(array(
+                            'theme_location' => 'footer',
+                            'menu_class' => 'footer-link-list d-flex justify-content-end',
+                            'container' => false,
+                            'depth' => 1,
+                            'add_li_class'   => 'footer-list-item'
+
+                        ));
                         ?>
-                              <li>
-                                  <a href="<?php echo $url; ?>">
-                                      <div class="icon-circle">
-                                          <div class="icon-circle-content">
-                                              <i class="fab <?php echo $icone; ?>"></i>
-                                          </div>
-                                      </div>
-                                  </a>
-                              </li>
+                   </li>
+                   <li>
+                   <?php
+                        wp_nav_menu(array(
+                            'theme_location' => 'footer-2',
+                            'menu_class' => 'footer-link-list d-flex justify-content-end',
+                            'container' => false,
+                            'depth' => 1,
+                            'add_li_class'   => 'footer-list-item'
 
-                      <?php
-                            }
-                            /* Reset data */
-                            wp_reset_postdata();
-                        } else {
-                            // No post
-                        } ?>
-
-                  </ul>
-              </li>
-              <li class="ending">
-                  <ul class="footer-link-list d-flex justify-content-end">
-                      <li class="footer-list-item"><a href="" class="footer-link">Nos maisons</a> </li>
-                      <li class="footer-list-item"><a href="" class="footer-link">Nos activités</a> </li>
-                      <li class="footer-list-item"><a href="" class="footer-link">Notre histoire</a> </li>
-                  </ul>
-              </li>
-              <li class="">
-                  <ul class="footer-link-list d-flex justify-content-end">
-                      <li class="footer-list-item"><a href="" class="footer-link">Mentions légales </a> </li>
-                      <li class="footer-list-item"><a href="" class="footer-link">Politique de cookies</a> </li>
-                  </ul>
-              </li>
-
-          </ul>
-      </div>
-  </footer>
+                        ));
+                        ?>
+                   </li>
+               </ul>
+           </div>
+       </footer>
 
   <!-- Background Overlay -- Needed to bg image opacity -->
   <div class="bg-overlay"></div>

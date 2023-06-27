@@ -39,5 +39,15 @@ function add_additional_class_on_li($classes, $item, $args)
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
+function register_my_menus() {
+    register_nav_menus(
+        array(
+            'footer' => __('Footer Menu'),
+            'footer-2'=> __('Footer Menu 2')
+        )
+    );
+}
+add_action('init', 'register_my_menus');
+
 require get_template_directory() . '/inc/cpt.php';
 

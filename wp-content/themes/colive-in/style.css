@@ -94,6 +94,10 @@ label {
 }
 
 /* Background Styles */
+.bg-colored-heavy {
+    background-color: var(--primary-color);
+}
+
 
 .bg-colored {
     background-color: var(--primary-color-light);

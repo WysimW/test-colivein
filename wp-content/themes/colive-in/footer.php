@@ -1,4 +1,8 @@
-       <!-- Footer section  -- Join -->
+<?php 
+$contact = get_permalink('49');
+?>
+      
+      <!-- Footer section  -- Join -->
        <section class="join-section bg-transparant">
            <!-- Promotion message -- Footer join section -->
            <?php
@@ -44,10 +48,10 @@
                 ?>
                    <h1> <?php echo strip_tags($post->post_content); ?></h1>
                    <div class="d-flex justify-content-center">
-                       <a href="#"></a>
+                       <a href="<?= $contact ?>">
                        <button class="btn btn-primary">
                            Demande de brochure <i class="fas fa-long-arrow-alt-right"> </i>
-                       </button>
+                       </button></a>
                    </div>
                <?php
                 }
@@ -60,7 +64,7 @@
        </section>
 
        <!-- Last section  -- Footer -->
-       <footer class="bg-colored">
+       <footer class="bg-colored-heavy">
            <div class="container d-flex justify-content-between footer-section flex-wrap">
                <ul>
                    <?php
@@ -139,19 +143,29 @@
                        </ul>
                    </li>
                    <li class="ending">
-                       <ul class="footer-link-list d-flex justify-content-end">
-                           <li class="footer-list-item"><a href="" class="footer-link">Nos maisons</a> </li>
-                           <li class="footer-list-item"><a href="" class="footer-link">Nos activités</a> </li>
-                           <li class="footer-list-item"><a href="" class="footer-link">Notre histoire</a> </li>
-                       </ul>
-                   </li>
-                   <li class="">
-                       <ul class="footer-link-list d-flex justify-content-end">
-                           <li class="footer-list-item"><a href="" class="footer-link">Mentions légales </a> </li>
-                           <li class="footer-list-item"><a href="" class="footer-link">Politique de cookies</a> </li>
-                       </ul>
-                   </li>
+                       <?php
+                        wp_nav_menu(array(
+                            'theme_location' => 'footer',
+                            'menu_class' => 'footer-link-list d-flex justify-content-end',
+                            'container' => false,
+                            'depth' => 1,
+                            'add_li_class'   => 'footer-list-item'
 
+                        ));
+                        ?>
+                   </li>
+                   <li>
+                   <?php
+                        wp_nav_menu(array(
+                            'theme_location' => 'footer-2',
+                            'menu_class' => 'footer-link-list d-flex justify-content-end',
+                            'container' => false,
+                            'depth' => 1,
+                            'add_li_class'   => 'footer-list-item'
+
+                        ));
+                        ?>
+                   </li>
                </ul>
            </div>
        </footer>
@@ -260,4 +274,5 @@
        <script src="<?php echo $theme_directory; ?>/assets/js/burger-menu.js"></script>
        <script src="<?php echo $theme_directory; ?>/assets/js/bootstrap.js"></script>
        </body>
+
        </html>
