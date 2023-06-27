@@ -17,7 +17,7 @@
 <body class="d-flex flex-column">
 
     <!-- Header -->
-    <header class="bg-white">
+    <header class="bg-uncolored">
         <div class="container">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg align-items-center">
