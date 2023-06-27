@@ -243,6 +243,8 @@ header .btn {
     height: auto;
     font-size: 16px;
     color: var(--primary-color-verylight);
+    color: var(--secondary-color);
+    width: 242px;
 }
 
 .btn-history {
@@ -257,13 +259,33 @@ header .btn {
 
 /* Cards styles */
 
-@media (min-width : 1024px) {
+@media (min-width : 1224px) {
     .card {
         border-radius: 50px;
         border: none;
         margin: 0 1em 2em;
         width: 331px !important;
         height: 277px !important;
+    }
+    
+    .card-img-top {
+        max-height: 220px;
+        object-fit: cover;
+    }
+}
+
+@media (min-width : 1024px) and (max-width: 1224px) {
+    .card {
+
+        border-radius: 50px;
+        border: none;
+        margin: 0 auto 1em;
+        width: 420px !important;
+    }
+
+    .card-img-top {
+        max-height: 280px;
+        object-fit: cover;
     }
 }
 
@@ -273,7 +295,12 @@ header .btn {
         border-radius: 50px;
         border: none;
         margin: 0 auto 1em;
-        width: 331px !important;
+        width: 550px !important;
+    }
+
+    .card-img-top {
+        max-height: 367px;
+        object-fit: cover;
     }
 }
 
@@ -426,31 +453,61 @@ a {
     padding: 12em 0;
 }
 
-.engagement-circle {
-    position: absolute;
-    top: -125px;
-    right: 5%;
-    width: 245px;
-    height: 245px;
-    border-radius: 50%;
-    background-color: var(--circle-color-three);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 5;
+@media (min-width : 1224px) {
+
+    .engagement-circle {
+        position: absolute;
+        top: -125px;
+        right: 5%;
+        width: 245px;
+        height: 245px;
+        border-radius: 50%;
+        background-color: var(--circle-color-three);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+    }
+
+    .engagement-circle-content {
+        padding: 30px;
+        text-align: center;
+        color: var(--secondary-color);
+        font-family: "Roboto", Sans-serif;
+        font-weight: 600;
+        line-height: 1.3em;
+        font-size: 19px;
+        transform: rotate(7deg);
+    }
 }
 
-.engagement-circle-content {
-    padding: 30px;
-    text-align: center;
-    color: var(--secondary-color);
-    font-family: "Roboto", Sans-serif;
-    font-weight: 600;
-    line-height: 1.3em;
-    font-size: 19px;
-    transform: rotate(7deg);
-}
+@media (min-width : 321px) and (max-width: 1224px) {
+    .engagement-circle {
+        position: absolute;
+        top: -50px;
+        right: 5%;
+        width: 175px;
+        height: 175px;
+        border-radius: 50%;
+        background-color: var(--circle-color-three);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+    }
 
+    .engagement-circle-content {
+        padding: 30px;
+        text-align: center;
+        color: var(--secondary-color);
+        font-family: "Roboto", Sans-serif;
+        font-weight: 600;
+        line-height: 1.3em;
+        font-size: 19px;
+        transform: rotate(7deg);
+    }
+
+}
 
 .join-section h1 {
     color: white;
@@ -682,17 +739,31 @@ a {
     margin-bottom: 1em;
 }
 
-.partners-list-item {
-    width: 25%;
-    padding: 0px !important;
-    margin-right: 64px;
-    box-sizing: border-box;
+
+@media (min-width : 1024px) {
+
+    .partners-list-item {
+        width: 25%;
+        padding: 0px !important;
+        margin-right: 64px;
+        box-sizing: border-box;
+    }
+}
+
+@media (min-width : 321px) and (max-width: 1024px) {
+    .partners-list-item {
+        width: 75%;
+        padding: 0px !important;
+        margin-right: 64px;
+        box-sizing: border-box;
+    }
 }
 
 .partners-logo {
-    width: 100%;
+    max-height: 150px;
 
 }
+
 
 /* Other pages */
 .ourhouse-whychoseus-section .fa-listing {
@@ -704,18 +775,18 @@ a {
 }
 
 
-@media (min-width : 1024px)  {
+@media (min-width : 1024px) {
     .ouractivites-list-item {
-    width: 50%;
-    margin-bottom: 1.5em;
-}
+        width: 50%;
+        margin-bottom: 1.5em;
+    }
 }
 
-@media (min-width : 321px) and (max-width: 1024px)  {
+@media (min-width : 321px) and (max-width: 1024px) {
     .ouractivites-list-item {
-    width: 100%;
-    margin-bottom: 1.5em;
-}
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
 }
 
 .ouractivities-messages-section p {
@@ -751,7 +822,7 @@ a {
 
 .our-history-message .circle-title {
     position: absolute;
-    top: 80%;
+    top: 75%;
     font-weight: bolder;
     text-align: center;
     width: 100%;
@@ -771,9 +842,21 @@ a {
 
 }
 
+.our-history-message .inner-circle img {
+    margin-bottom: 50px;
+}
+
 .contact-form-section h1 {
     color: var(--e-global-color-ec12ad3);
     font-family: "Comfortaa", Sans-serif;
     font-size: 3em;
     font-weight: 700;
+}
+
+.mentions-section {
+    padding-top: 3em;
+}
+
+.politics-section {
+    padding-top: 2em;
 }

@@ -17,5 +17,6 @@ wordpress/sitemap.xml
 
 =======
 wordpress/sitemap.xml.gz
+wordpress/wp-config.php
 wp-config.php
 >>>>>>> a0652f61637d1d9be548a0067a2b56953a0eb142

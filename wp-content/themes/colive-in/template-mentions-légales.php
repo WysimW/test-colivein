@@ -16,7 +16,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="bg-colored-verylight">
+<section class="bg-colored-verylight mentions-section">
 
     <div class="container">
     <?php
