@@ -1,0 +1,922 @@
+/*
+Theme Name: Colive'in
+Author: Thomas Dupez
+Description: Thème pour un test de compétence
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: colive-in
+*/
+
+/* Variable declaration */*
+html, body {
+    margin: 0 !important;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #edba95;
+    --primary-color-alpha: #EDBA95BA;
+    --primary-color-light: #F2CFB6;
+    --secondary-color: #424542;
+    --nocolor: #fdf9f5;
+    --circle-color-one: #edba953a;
+    --circle-color-two: #edba9596;
+    --circle-color-three: #F7E1D3;
+}
+
+/* Common styles */
+body {
+    font-family: Roboto;
+    position: relative;
+    background-image: url('assets/images/others/pret-nous-rej.jpeg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section {
+    padding-bottom: 2em;
+
+}
+
+h1 {
+    font-family: Comfortaa;
+    font-weight: bold;
+    font-size: 32px;
+    padding: 1em 0;
+}
+
+p {
+    text-align: justify;
+    color: var(--secondary-color);
+    font-family: "Roboto", Sans-serif;
+    font-weight: 400;
+}
+
+strong {
+    color: var(--secondary-color);
+}
+
+ul {
+    padding: 0px;
+}
+
+.text-container {
+    padding: 48px 16px;
+}
+
+/* Background Styles */
+
+.bg-colored {
+    background-color: var(--primary-color-light);
+}
+
+.bg-colored-alpha {
+    background-color: var(--primary-color-alpha);
+}
+
+.bg-uncolored {
+    background-color: var(--nocolor);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(83, 83, 83, 0.726);
+    z-index: -5;
+}
+
+/* Form Styles */
+.form-check-input {
+    background-color: #f56e28;
+    width: 35px !important;
+    height: 20px;
+
+}
+
+.form-check-input:checked {
+    background-color: #edba95;
+
+}
+
+.form-check-input::before {
+    background-color: white !important;
+
+}
+
+.form-check-input::after {
+    background-color: white !important;
+}
+
+/* Buttons styles */
+.btn-primary {
+    padding: 1em 2em 1em 2em;
+    line-height: 1;
+    font-family: Montserrat;
+    font-weight: 700;
+    background-color: var(--primary-color);
+    border: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.10rem;
+    border-radius: 100px;
+    width: 242px;
+    text-transform: uppercase;
+}
+
+.btn-learn_more {
+    width: 250px;
+}
+
+.btn-learn_more:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Video background styles */
+@media (min-width: 1024px) {
+    .video-container {
+        position: relative;
+        height: 130vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    .video-container {
+        position: relative;
+        height: 50vh;
+    }
+}
+
+.video-container video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5);
+
+}
+
+/* Navigation bar styles */
+.nav-item {
+    padding: 15px;
+}
+
+.nav-logo {
+    width: 151px;
+}
+
+.nav-link {
+    padding: 13px 25px !important;
+    transition: 0.3s;
+    box-sizing: border-box;
+    border-bottom: 1.5px solid transparent;
+    font-family: Comfortaa;
+    font-size: 0.95em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+
+.nav-link:hover {
+    border-bottom: 1.5px solid;
+}
+
+.navbar {
+    margin-top: 15px;
+}
+
+header .btn {
+    margin-left: 10px;
+}
+
+.btn-primary:hover {
+    color: white;
+    background-color: var(--secondary-color);
+}
+
+.burger-cross-icon {
+    display: none;
+}
+
+.bg-overlay-burger {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.747);
+    z-index: 14;
+}
+
+@media (max-width: 1024px) { /* header for small device */
+    header .show {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 90%;
+        background-color: #fdf9f5;
+        display: flex;
+        align-items: center;
+        z-index: 15;
+    }
+
+    .ms-auto {
+        margin-left: 0 !important;
+    }
+
+
+    header .navbar-collapse .align-items-center {
+        align-items: flex-start !important;
+    }
+
+    header ul {
+        margin-left: 0 !important;
+        display: flex;
+    }
+
+    header ul li {
+        margin-left: 1em;
+    }
+
+    .nav-link {
+        font-size: 1.2em;
+    }
+
+    .btn-nav {
+        width: auto;
+        height: auto;
+        font-size: 16px;
+        color: var(--nocolor);
+    }
+
+    .burger-cross-icon {
+        font-size: 25px;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        display: inline-block;
+    }
+}
+
+/* Welcome section styles -- Index */
+
+@media (min-width: 1024px) {
+    .welcome-section-lg {
+        position: absolute;
+        padding-bottom: 4em;
+        width: 100%;
+        bottom: 0;
+        z-index: 2;
+    }
+
+    .welcome-section-sm {
+        display: none;
+    }
+}
+
+@media (min-width : 321px) and (max-width: 1024px) {
+    .welcome-section-lg {
+        display: none
+    }
+
+    .welcome-section-sm {
+        padding-bottom: 4em;
+        width: 100%;
+    }
+}
+
+.welcome-section-lg h1,
+.welcome-section-sm h1 {
+    font-size: 1.4rem;
+    line-height: 1.1em;
+    margin-bottom: 1em;
+}
+
+
+.strong-together {
+    font-size: 1.4rem;
+}
+
+/* House section styles -- Index */
+.house-section {
+    position: relative;
+    z-index: 3;
+}
+
+.house-section h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 1em;
+    margin-left: -2px;
+}
+
+.house-section .text-container {
+    padding-top: 0.2em;
+    padding-bottom: 1em;
+}
+
+.card-container {
+    padding: 10px;
+}
+
+@media (min-width : 1024px) {
+    .card {
+        border-radius: 50px;
+        border: none;
+        margin: 0 1em 2em;
+        width: 331px !important;
+        height: 277px !important;
+    }
+}
+
+@media (min-width : 321px) and (max-width: 1024px) {
+    .card {
+
+        border-radius: 50px;
+        border: none;
+        margin: 0 auto 1em;
+        width: 331px !important;
+    }
+}
+
+.card-img-top {
+    border-radius: 50px 50px 0 0;
+}
+
+.card-text {
+    color: var(--secondary-color);
+    font-family: "Comfortaa", Sans-serif;
+    font-weight: bold;
+    -webkit-text-stroke-width: 0.3px;
+    stroke-width: 0.3px;
+    -webkit-text-stroke-color: var(--secondary-color);
+    stroke: var(--secondary-color);
+    text-align: center;
+}
+
+/* Service section Styles -- Index */
+
+@media (min-width : 768px) {
+    .service-list-item {
+
+        padding: 10px;
+        width: 45%;
+    }
+}
+
+@media (min-width : 321px) and (max-width: 768px) {
+    .service-list-item {
+
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+.fa-listing {
+    font-size: 50px;
+    color: var(--primary-color);
+}
+
+.list-text {
+    margin-left: 1em;
+}
+
+.list-title {
+    font-family: "Comfortaa", Sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.list-description {
+    color: var(--secondary-color);
+    font-family: "Roboto", Sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.list-image {
+width: 90%;
+border-radius: 25px;
+}
+
+.service-section ul {
+    margin: 3em 0;
+}
+
+.service-section h1 {
+    size: 2em;
+}
+
+.offers-img {
+    width: 100%;
+}
+
+/* Fontator section */
+.fondators-section h1 {
+    color: var(--secondary-color);
+    font-family: "Comfortaa", Sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.outer-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+.circle-color-one {
+    background-color: var(--circle-color-one);
+    margin-right: -25px;
+}
+
+.circle-color-two {
+    background-color: var(--circle-color-two);
+    margin-left: -25px;
+}
+
+.circle-title {
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    width: 100%;
+    font-family: Comfortaa;
+    font-size: 32px;
+    color: var(--secondary-color);
+    z-index: 1;
+}
+
+.inner-circle {
+    width: 186px;
+    height: 186px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: transparent;
+
+}
+
+.inner-circle img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.btn-history {
+    width: 370px;
+    margin-top: 3em;
+}
+
+.fondators-section .btn {
+    width: 370px;
+    margin-top: 3em;
+}
+
+/* Partners section */
+.partners-section {
+    position: relative;
+}
+
+.partners-section h1 {
+    color: var(--secondary-color);
+    font-family: "Comfortaa", Sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.partners-list-item {
+    width: 25%;
+    padding: 0px !important;
+    margin-right: 64px;
+    box-sizing: border-box;
+}
+
+.partners-logo {
+    width: 100%;
+
+}
+
+
+
+/* Join section */
+.join-section {
+    position: relative;
+    padding: 12em 0;
+}
+
+.engagement-circle {
+    position: absolute;
+    top: -125px;
+    right: 5%;
+    width: 245px;
+    height: 245px;
+    border-radius: 50%;
+    background-color: var(--circle-color-three);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.engagement-circle-content {
+    padding: 30px;
+    text-align: center;
+    color: var(--secondary-color);
+    font-family: "Roboto", Sans-serif;
+    font-weight: 600;
+    line-height: 1.3em;
+    font-size: 19px;
+    transform: rotate(7deg);
+}
+
+
+.join-section h1 {
+    color: white;
+    font-family: "Comfortaa", Sans-serif;
+    font-size: 3.5em;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+.join-section .btn {
+    width: 336px;
+    margin-top: 3em;
+}
+
+/* Footer section */
+.footer-section {
+    padding: 3em 0;
+}
+
+.phone-number {
+    margin: 1em 0 3.5em;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 1em;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 7px;
+}
+
+.icon-circle-content {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.footer-link {
+    font-family: Comfortaa;
+    font-weight: 700;
+    color: var(--secondary-color);
+    fill: var(--secondary-color);
+
+    text-decoration: none;
+}
+
+.footer-list-item {
+    padding: 10px 0px;
+    margin-left: 15px;
+}
+
+.ending {
+    margin-top: auto;
+}
+
+/* Cookie consent section */
+.cookie-consent-element {
+    position: fixed;
+    bottom: -50px;
+    right: 30px;
+    background-color: var(--nocolor);
+    width: 190px;
+    height: 70px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px 5px;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.cookie-consent-element:hover {
+    bottom: -20px;
+}
+
+.cookie-popup-element {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 526px;
+    height: 260px;
+    padding: 15px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    z-index: 20;
+}
+
+.cookie-popup-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+}
+
+.cookie-popup-title {
+    text-align: center;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    overflow: visible;
+    justify-self: center;
+    align-self: center;
+    font-size: 15px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.cookie-popup-cross-icon {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    justify-self: end;
+    align-self: flex-start;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.cookie-popup-text {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    font-size: 12px;
+    margin-bottom: 2em;
+}
+
+.cookie-popup-button {
+    grid-row: 3 / 4;
+    width: 154px;
+    height: 45px;
+    font-size: 15px;
+    overflow: visible;
+    white-space: nowrap;
+    border: transparent;
+    color: black;
+    font-weight: 500;
+}
+
+.btn1 {
+    margin-right: auto;
+    background-color: var(--primary-color);
+    border: 1px solid #f2f2f2;
+}
+
+.btn2 {
+    margin: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #f2f2f2;
+}
+
+.btn3 {
+    margin-left: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #f2f2f2;
+}
+
+.cookie-popup-button:nth-child(4) {
+    grid-column: 1 / 2;
+}
+
+.cookie-popup-button:nth-child(5) {
+    grid-column: 2 / 3;
+}
+
+.cookie-popup-button:nth-child(6) {
+    grid-column: 3 / 4;
+}
+
+.cookie-popup-link {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 12px;
+    text-decoration: underline;
+    margin-top: 1.5em;
+}
+
+.display-none {
+    display: none;
+}
+
+.cookie-popup-element-two {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 526px;
+    padding: 15px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    z-index: 20;
+}
+
+.cookie-popup-grid-container-two {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, auto);
+}
+
+.cookie-popup-button-two {
+    grid-row: 6;
+    height: 45px;
+    font-size: 15px;
+    overflow: visible;
+    white-space: nowrap;
+    border: transparent;
+    color: black;
+    font-weight: 500;
+}
+
+
+.btn4 {
+    margin-right: auto;
+    background-color: var(--primary-color);
+    border: 1px solid #f2f2f2;
+    width: 125px;
+    grid-column: 1 / 2;
+}
+
+.btn5 {
+    margin: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #f2f2f2;
+    width: 125px;
+    grid-column: 2 / 3;
+}
+
+.btn6 {
+    margin-left: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #f2f2f2;
+    width: 200px;
+    grid-column: 3 / 4;
+}
+
+.cookie-popup-link-two {
+    grid-column: 2 / 3;
+    grid-row: 7;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 12px;
+    text-decoration: underline;
+    margin-top: 1.5em;
+}
+
+.cookie-popup-function {
+    grid-row: 3;
+    grid-column: 1 / -1;
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.cookie-popup-function-name {
+    color: #222222;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cookie-popup-function-state {
+    color: #008000;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.cookie-popup-function .fa {
+    font-size: 30px;
+}
+
+.accordion-content {
+    margin-top: 1em;
+    font-size: 12px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-content.show {
+    max-height: 100vh;
+    /* ou tout autre valeur selon votre besoin */
+}
+
+.accordion-arrow {
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.function-accordion-arrow.up,
+.stats-accordion-arrow.up,
+.market-accordion-arrow.up {
+    transform: rotate(180deg);
+}
+
+.cookie-popup-stats {
+    grid-row: 4;
+    grid-column: 1 / -1;
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.cookie-popup-market {
+    grid-row: 5;
+    grid-column: 1 / -1;
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Our Houses page */
+.bg-image {
+    height: 480px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ourhouse-whychoseus-section .fa-listing {
+    margin-right: 0.3em;
+}
+
+.icon-listing {
+    width: 62px;
+}
+
+.ourhouses-list-item {
+    margin-bottom: 1.5em;
+}
+
+.ouractivites-list-item {
+    width: 50%;
+    margin-bottom: 1.5em;
+}
+
+/* Our Activities page */
+.bg-image-activities {
+    background-image: url("https://colivein.com/wp-content/uploads/2022/11/AdobeStock_291482044.jpeg");
+    height: 480px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ouractivities-messages-section p {
+    text-align: center;
+}
+
+.ouractivities-strong-endmessages{
+    margin-top:1em
+}
