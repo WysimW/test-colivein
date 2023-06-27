@@ -93,48 +93,48 @@
                     wp_reset_postdata();
                     ?>
                </ul>
-               
+
                <ul class="d-flex flex-column align-items-end">
                    <li class=""> Suivez-nous sur les réseaux sociaux : </li>
                    <li>
                        <ul class="d-flex justify-content-end">
-                       <?php
-                    // WP_Query request arguments
-                    $args = array(
-                        'post_type' => 'social-networks',
-                        'posts_per_page' => -1, // pour récupérer tous les posts
-                        'meta_key' => 'order',
-                        'orderby' => 'meta_value',
-                        'order' => 'ASC'
-                    );
-
-                    // WP_Query loop
-                    $the_query = new WP_Query($args);
-
-                    if ($the_query->have_posts()) {
-                        // at least one post find
-                        while ($the_query->have_posts()) {
-                            $the_query->the_post();
-                            $url = get_field('network_url');
-                            $icone = get_field('network_icon');
-                    ?>
-                           <li>
-                               <a href="<?php echo $url; ?>">
-                               <div class="icon-circle">
-                                   <div class="icon-circle-content">
-                                       <i class="fab <?php echo $icone; ?>"></i>
-                                   </div>
-                               </div>
-                               </a>
-                           </li>
-                           
                            <?php
-                        }
-                        /* Reset data */
-                        wp_reset_postdata();
-                    } else {
-                        // No post
-                    } ?>
+                            // WP_Query request arguments
+                            $args = array(
+                                'post_type' => 'social-networks',
+                                'posts_per_page' => -1, // pour récupérer tous les posts
+                                'meta_key' => 'order',
+                                'orderby' => 'meta_value',
+                                'order' => 'ASC'
+                            );
+
+                            // WP_Query loop
+                            $the_query = new WP_Query($args);
+
+                            if ($the_query->have_posts()) {
+                                // at least one post find
+                                while ($the_query->have_posts()) {
+                                    $the_query->the_post();
+                                    $url = get_field('network_url');
+                                    $icone = get_field('network_icon');
+                            ?>
+                                   <li>
+                                       <a href="<?php echo $url; ?>">
+                                           <div class="icon-circle">
+                                               <div class="icon-circle-content">
+                                                   <i class="fab <?php echo $icone; ?>"></i>
+                                               </div>
+                                           </div>
+                                       </a>
+                                   </li>
+
+                           <?php
+                                }
+                                /* Reset data */
+                                wp_reset_postdata();
+                            } else {
+                                // No post
+                            } ?>
 
                        </ul>
                    </li>
@@ -259,3 +259,5 @@
        <script src="<?php echo $theme_directory; ?>/assets/js/cookie-popup.js"></script>
        <script src="<?php echo $theme_directory; ?>/assets/js/burger-menu.js"></script>
        <script src="<?php echo $theme_directory; ?>/assets/js/bootstrap.js"></script>
+       </body>
+       </html>

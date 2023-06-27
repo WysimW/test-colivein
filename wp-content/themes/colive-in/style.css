@@ -63,6 +63,32 @@ ul {
     padding: 0px;
 }
 
+
+input, select, textarea {
+    background-color: var(--circle-color-three);
+    border:none;
+    border-radius: 30px;
+    padding: 8px;
+    font-size: 15px;
+    width: 100%;
+    margin-top: 0.5em;
+}
+
+.form-label {
+    margin-left: 0.2em;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+
+
+
 .text-container {
     padding: 48px 16px;
 }
@@ -94,6 +120,10 @@ ul {
 }
 
 /* Form Styles */
+.container-form {
+    max-width: 450px;
+}
+
 .form-check-input {
     background-color: #f56e28;
     width: 35px !important;
@@ -128,6 +158,10 @@ ul {
     border-radius: 100px;
     width: 242px;
     text-transform: uppercase;
+}
+
+.btn-submit {
+    width: 450px;
 }
 
 .btn-learn_more {
@@ -919,4 +953,56 @@ border-radius: 25px;
 
 .ouractivities-strong-endmessages{
     margin-top:1em
+}
+
+.our-history-message p {
+font-size: 19px;
+}
+
+.our-history-message .fondators {
+    padding-top: 4em;
+}
+
+.our-history-message .outer-circle {
+    height: 300px;
+    width: 300px;
+}
+
+.our-history-message .circle-color-one {
+    background-color: var(--primary-color);
+    margin: auto;
+}
+
+.our-history-message .circle-color-two {
+    background-color: var(--primary-color-light);
+    margin: auto;
+}
+
+.our-history-message  .circle-title {
+    position: absolute;
+    top: 80%;
+    font-weight: bolder;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    color: var(--secondary-color);
+    z-index: 1;
+}
+
+.our-history-message  .inner-circle {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: transparent;
+
+}
+
+.contact-form-section h1 {
+    color: var( --e-global-color-ec12ad3 );
+    font-family: "Comfortaa", Sans-serif;
+    font-size: 3em;
+    font-weight: 700;
 }
