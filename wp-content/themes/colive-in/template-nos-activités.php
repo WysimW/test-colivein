@@ -21,7 +21,7 @@ get_header(); ?>
 
     </div>
 </section>
-<section class="ourhouse-whychoseus-section bg-uncolored">
+<section class="ourhouse-whychoseus-section bg-colored-verylight">
     <div class="container">
         <?php
         $block_post = get_post(197);

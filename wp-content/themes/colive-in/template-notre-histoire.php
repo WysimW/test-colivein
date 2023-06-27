@@ -6,7 +6,7 @@ get_header();
 
 
 
-<section class="page-description-section our-history-message bg-uncolored">
+<section class="page-description-section our-history-message bg-colored-verylight">
 
     <?php if ($bg_image_url) : ?>
         <div class="bg-image" style="background-image: url(<?php echo $bg_image_url ?>);"></div>

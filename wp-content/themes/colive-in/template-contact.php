@@ -2,7 +2,7 @@
 /* Template Name: Contact templates */
 get_header('contact');
 ?>
-<main class="bg-uncolored contact-form-section">
+<main class="bg-colored-verylight contact-form-section">
     <div class="container">
         <h1 class="text-center">Demande de brochure
         </h1>

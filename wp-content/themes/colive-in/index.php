@@ -87,7 +87,7 @@
 
 
    <!-- Third index section  -- Services -->
-   <section class="service-section bg-uncolored">
+   <section class="service-section bg-colored-verylight">
        <div class="container">
 
            <!-- Activities part -->
@@ -216,7 +216,7 @@
    </section>
 
    <!-- Fourth index section  -- Fondators -->
-   <section class="fondators-section bg-uncolored">
+   <section class="fondators-section bg-colored-verylight">
        <div class="container">
            <?php
             $block_post = get_post(193);

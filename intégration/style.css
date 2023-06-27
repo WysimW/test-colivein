@@ -4,7 +4,7 @@
     --primary-color-alpha: #EDBA95BA;
     --primary-color-light: #F2CFB6;
     --secondary-color: #424542;
-    --nocolor: #fdf9f5;
+    --primary-color-verylight: #fdf9f5;
     --circle-color-one: #edba953a;
     --circle-color-two: #edba9596;
     --circle-color-three: #F7E1D3;
@@ -62,8 +62,8 @@ ul {
     background-color: var(--primary-color-alpha);
 }
 
-.bg-uncolored {
-    background-color: var(--nocolor);
+.bg-colored-verylight {
+    background-color: var(--primary-color-verylight);
 }
 
 .bg-white {
@@ -236,7 +236,7 @@ ul {
         width: auto;
         height: auto;
         font-size: 16px;
-        color: var(--nocolor);
+        color: var(--primary-color-verylight);
     }
 
     .burger-cross-icon {
@@ -598,7 +598,7 @@ ul {
     position: fixed;
     bottom: -50px;
     right: 30px;
-    background-color: var(--nocolor);
+    background-color: var(--primary-color-verylight);
     width: 190px;
     height: 70px;
     border-radius: 10px;
