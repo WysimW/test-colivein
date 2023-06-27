@@ -315,6 +315,11 @@ ul {
         border: none;
         margin: 0 1em 2em;
         width: 331px !important;
+        height: 200px !important;;
+    }
+
+    .card img {
+        height: 200px;
     }
 }
 
