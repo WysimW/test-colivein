@@ -264,7 +264,7 @@ ul {
     }
 }
 
-@media (min-width : 321px) and (max-width: 1024px) {
+@media (min-width : 0px) and (max-width: 1024px) {
     .welcome-section-lg {
         display: none
     }
@@ -323,7 +323,7 @@ ul {
     }
 }
 
-@media (min-width : 321px) and (max-width: 1024px) {
+@media (min-width : 0px) and (max-width: 1024px) {
     .card {
 
         border-radius: 50px;
@@ -358,7 +358,7 @@ ul {
     }
 }
 
-@media (min-width : 321px) and (max-width: 768px) {
+@media (min-width : 0px) and (max-width: 768px) {
     .service-list-item {
 
         padding: 10px;

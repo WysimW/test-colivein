@@ -125,7 +125,7 @@
                     ?>
                            <!-- HTML code with dynamic element -->
                            <li class="service-list-item d-flex flex-row">
-                               <i aria-hidden="true" class="fas <?php echo $icone; ?> fa-listing"></i>
+                           <div class="icon-listing"><i aria-hidden="true" class="fas <?php echo $icone; ?> fa-listing"></i></div>
 
                                <div class="list-text d-flex flex-column ">
                                    <span class="list-title"><?php echo $titre; ?></span>
@@ -185,7 +185,7 @@
                     ?>
                            <!-- HTML code with dynamic element -->
                            <li class="service-list-item d-flex flex-row">
-                               <i aria-hidden="true" class="fas <?php echo $icone; ?> fa-listing"></i>
+                           <div class="icon-listing"><i aria-hidden="true" class="fas <?php echo $icone; ?> fa-listing"></i></div>
 
                                <div class="list-text d-flex flex-column ">
                                    <span class="list-title"><?php echo $titre; ?></span>

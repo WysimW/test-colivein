@@ -14,12 +14,9 @@ function enqueue_my_stylesheets_and_scripts()
     wp_enqueue_script('cookie-popup', get_template_directory_uri() . '/assets/js/cookie-popup.js', array('jquery'), '1.0', true);
     wp_enqueue_script('burger-menu', get_template_directory_uri() . '/assets/js/burger-menu.js', array('jquery'), '1.0', true);
     wp_enqueue_script('burger-menu', get_template_directory_uri() . '/assets/js/bootstrap.js', array('jquery'), '1.0', true);
-
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_my_stylesheets_and_scripts');
-
-
 
 add_theme_support('admin-bar', array('callback' => '__return_false'));
 
@@ -29,6 +26,7 @@ function register_my_menu()
 {
     register_nav_menu('primary', __('Primary Menu'));
 }
+
 add_action('init', 'register_my_menu');
 
 function add_additional_class_on_li($classes, $item, $args)
@@ -40,15 +38,28 @@ function add_additional_class_on_li($classes, $item, $args)
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
-function register_my_menus() {
+function register_my_menus()
+{
     register_nav_menus(
         array(
             'footer' => __('Footer Menu'),
-            'footer-2'=> __('Footer Menu 2')
+            'footer-2' => __('Footer Menu 2')
         )
     );
 }
 add_action('init', 'register_my_menus');
 
-require get_template_directory() . '/inc/cpt.php';
+function add_menu_link($items, $args)
+{
 
+    if ($args->theme_location == 'primary') {
+        $page = get_page_by_path('contact');
+        $page_url = get_permalink($page->ID);
+        $items .= '<li class="menu-item nav-item"><a href="' . $page_url . '" class="btn btn-primary btn-nav">Demande de brochure</a></li>';
+    }
+    return $items;
+}
+add_filter('wp_nav_menu_items', 'add_menu_link', 10, 2);
+
+
+require get_template_directory() . '/inc/cpt.php';

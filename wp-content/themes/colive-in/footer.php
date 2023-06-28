@@ -65,8 +65,8 @@ $contact = get_permalink('49');
 
        <!-- Last section  -- Footer -->
        <footer class="bg-colored-heavy">
-           <div class="container d-flex justify-content-between footer-section flex-wrap">
-               <ul>
+           <div class="container footer-section">
+               <ul class="footer-list">
                    <?php
                     $args = array(
                         'post_type' => 'footer',
@@ -98,7 +98,7 @@ $contact = get_permalink('49');
                     ?>
                </ul>
 
-               <ul class="d-flex flex-column align-items-end">
+               <ul class="footer-list d-flex flex-column align-items-end">
                    <li class=""> Suivez-nous sur les réseaux sociaux : </li>
                    <li>
                        <ul class="d-flex justify-content-end">
@@ -276,3 +276,4 @@ $contact = get_permalink('49');
        </body>
 
        </html>
+       <?php wp_footer(); ?>

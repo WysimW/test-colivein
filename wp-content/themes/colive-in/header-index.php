@@ -2,8 +2,6 @@
 <html lang="fr">
 <?php
 $theme_directory = get_template_directory_uri();
-$page = get_page_by_path('contact');
-$page_url = get_permalink($page->ID);
 ?>
 
 <head>
@@ -41,14 +39,13 @@ $page_url = get_permalink($page->ID);
                             <!-- Internal link -->
                             <?php
                             wp_nav_menu(array(
-                                'theme_location' => 'primary', // Le nom de l'emplacement du menu que vous avez défini dans votre thème
-                                'container' => false, // Ne met pas le menu dans un conteneur
-                                'menu_class' => 'navbar-nav ms-auto align-items-center', // La classe pour la liste ul
+                                'theme_location' => 'primary',
+                                'container' => false,
+                                'menu_class' => 'navbar-nav ms-auto align-items-center',
 
                             ));
                             ?>
 
-                            <a href="<?= $page_url; ?>" class="btn btn-primary btn-nav">Demande de brochure</a>
 
                         </div>
                     </div>

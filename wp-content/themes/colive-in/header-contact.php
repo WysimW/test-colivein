@@ -3,8 +3,6 @@
 
 <head>
     <?php wp_head(); 
-    $page = get_page_by_path('contact');
-    $page_url = get_permalink($page->ID);
     ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +35,6 @@
                             'menu_class' => 'navbar-nav ms-auto align-items-center', // La classe pour la liste ul
                         ));
                         ?>
-                        <a href="<?= $page_url; ?>" class="btn btn-primary btn-nav">Demande de brochure</a>
                     </div>
                 </div>
             </nav>

@@ -146,9 +146,20 @@ label {
 
 .list-title {
     font-family: "Comfortaa", Sans-serif;
-    font-size: 1.5em;
     font-weight: bold;
     color: var(--primary-color);
+}
+
+@media (min-width : 374px)  {
+    .list-title {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width : 0px) and (max-width: 374px) {
+    .list-title {
+        font-size: 1.2em;
+    }
 }
 
 .list-description {
@@ -164,7 +175,7 @@ label {
 }
 
 .icon-listing {
-    width: 62px;
+    flex: 0 0 62px; 
 }
 
 /* Form Styles */
@@ -204,7 +215,6 @@ label {
     color: var(--secondary-color);
     font-size: 1.10rem;
     border-radius: 100px;
-    width: 242px;
     text-transform: uppercase;
 }
 
@@ -218,13 +228,6 @@ label {
     background-color: var(--secondary-color) !important;
 }
 
-.btn-submit {
-    width: 450px;
-}
-
-.btn-learn_more {
-    width: 250px;
-}
 
 .btn-learn_more:hover {
     color: var(--primary-color) !important;
@@ -244,20 +247,71 @@ header .btn {
     font-size: 16px;
     color: var(--primary-color-verylight);
     color: var(--secondary-color);
-    width: 242px;
 }
 
 .btn-history {
-    width: 370px;
     margin-top: 3em;
 }
 
+@media (min-width : 1024px) {
+    .btn-primary {
+        width: 242px;
+    }
+    .btn-submit {
+        width: 450px;
+    }
+    
+    .btn-learn_more {
+        width: 250px;
+    }
+    .btn-nav {
+        width: 242px;
+    }
+    .btn-history {
+        width: 370px;
+    }
 
+    .join-section .btn {
+        width: 336px;
+    }
+
+    .fondators-section .btn {
+        width: 370px;
+    }
+}
+
+@media (min-width : 0px) and (max-width: 1024px) {
+    .btn-primary {
+        width: 242px;
+    }
+    .btn-submit {
+        width: 242px;
+    }
+    
+    .btn-learn_more {
+        width: 242px;
+    }
+    .btn-nav {
+        width: 242px;
+    }
+    .btn-history {
+        width: 242px;
+    }
+
+    .join-section .btn {
+        width: 242px;
+    }
+
+    .fondators-section .btn {
+        width: 242px;
+    }
+}
+
+
+/* Cards styles */
 .card-container {
     padding: 10px;
 }
-
-/* Cards styles */
 
 @media (min-width : 1224px) {
     .card {
@@ -289,7 +343,7 @@ header .btn {
     }
 }
 
-@media (min-width : 321px) and (max-width: 1024px) {
+@media (min-width : 0px) and (max-width: 1024px) {
     .card {
 
         border-radius: 50px;
@@ -394,7 +448,7 @@ a {
 
 
 /* nav for small device */
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
 
     header .show {
         position: fixed;
@@ -481,7 +535,7 @@ a {
     }
 }
 
-@media (min-width : 321px) and (max-width: 1224px) {
+@media (min-width : 0px) and (max-width: 1224px) {
     .engagement-circle {
         position: absolute;
         top: -50px;
@@ -519,13 +573,14 @@ a {
 }
 
 .join-section .btn {
-    width: 336px;
     margin-top: 3em;
 }
 
 /* Footer section */
 .footer-section {
     padding: 3em 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .phone-number {
@@ -572,6 +627,26 @@ a {
     margin-top: auto;
 }
 
+@media (min-width : 1024px) {
+    .footer-section {
+       justify-content: space-between;
+    }
+}
+
+@media (min-width : 0px) and (max-width: 1024px) {
+    .footer-section {
+        flex-direction: column;
+       justify-content: center;
+    }
+
+    .footer-section .footer-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+    }
+}
+
+
 /* Welcome section styles -- Index */
 
 @media (min-width: 1024px) {
@@ -588,7 +663,7 @@ a {
     }
 }
 
-@media (min-width : 321px) and (max-width: 1024px) {
+@media (min-width : 0px) and (max-width: 1024px) {
     .welcome-section-lg {
         display: none
     }
@@ -639,7 +714,7 @@ a {
     }
 }
 
-@media (min-width : 321px) and (max-width: 768px) {
+@media (min-width : 0px) and (max-width: 768px) {
     .service-list-item {
 
         padding: 10px;
@@ -673,10 +748,7 @@ a {
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 500px;
-    height: 500px;
     border-radius: 50%;
-
     overflow: hidden;
 }
 
@@ -692,18 +764,14 @@ a {
 
 .circle-title {
     position: absolute;
-    top: 20%;
     text-align: center;
     width: 100%;
     font-family: Comfortaa;
-    font-size: 32px;
     color: var(--secondary-color);
     z-index: 1;
 }
 
 .inner-circle {
-    width: 186px;
-    height: 186px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -718,10 +786,81 @@ a {
     border-radius: 50%;
 }
 
+@media (min-width : 1024px) {
+    .outer-circle {
+        width: 500px;
+        height: 500px;
+    }
+
+    .circle-title {
+        top: 20%;
+        font-size: 32px;
+    }
+    
+    .inner-circle {
+        width: 186px;
+        height: 186px;
+    }
+    
+}
+
+@media (min-width : 768px) and (max-width: 1024px) {
+    .outer-circle {
+        width: 400px;
+        height: 400px;
+    }
+    
+    
+    .circle-title {
+        top: 20%;
+        font-size: 32px;
+    }
+    
+    .inner-circle {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (min-width : 425px) and (max-width: 768px) {
+    .outer-circle {
+        width: 300px;
+        height: 300px;
+    }
+    
+    
+    .circle-title {
+        top: 20%;
+        font-size: 32px;
+    }
+    
+    .inner-circle {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (min-width : 0px) and (max-width: 425px) {
+    .outer-circle {
+        width: 200px;
+        height: 200px;
+    }
+    
+    
+    .circle-title {
+        top: 13%;
+        font-size: 24px;
+    }
+    
+    .inner-circle {
+        width: 90px;
+        height: 90px;
+    }
+}
+
 
 
 .fondators-section .btn {
-    width: 370px;
     margin-top: 3em;
 }
 
@@ -748,20 +887,29 @@ a {
         margin-right: 64px;
         box-sizing: border-box;
     }
+
+    .partners-logo {
+        max-height: 150px;
+    }
 }
 
-@media (min-width : 321px) and (max-width: 1024px) {
+@media (min-width : 374px) and (max-width: 1024px) {
     .partners-list-item {
         width: 75%;
         padding: 0px !important;
         margin-right: 64px;
         box-sizing: border-box;
     }
+
+    .partners-logo {
+        max-height: 150px;
+    }
 }
 
-.partners-logo {
-    max-height: 150px;
-
+@media (min-width : 0px) and (max-width: 1024px){
+    .partners-logo {
+        max-height: 100px;
+    }
 }
 
 
@@ -782,7 +930,7 @@ a {
     }
 }
 
-@media (min-width : 321px) and (max-width: 1024px) {
+@media (min-width : 0px) and (max-width: 1024px) {
     .ouractivites-list-item {
         width: 100%;
         margin-bottom: 1.5em;
@@ -803,11 +951,6 @@ a {
 
 .our-history-message .fondators {
     padding-top: 4em;
-}
-
-.our-history-message .outer-circle {
-    height: 300px;
-    width: 300px;
 }
 
 .our-history-message .circle-color-one {
@@ -832,8 +975,6 @@ a {
 }
 
 .our-history-message .inner-circle {
-    width: 150px;
-    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -842,8 +983,30 @@ a {
 
 }
 
-.our-history-message .inner-circle img {
-    margin-bottom: 50px;
+@media (min-width : 425px)  {
+    .our-history-message .outer-circle {
+        height: 300px;
+        width: 300px;
+    }
+
+    .our-history-message .inner-circle {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width : 0px) and (max-width: 425px) {
+    .our-history-message .outer-circle {
+        height: 150px;
+        width: 150px;
+    }
+
+    .our-history-message .inner-circle {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 35px;
+    }
 }
 
 .contact-form-section h1 {
