@@ -1331,4 +1331,4 @@ CREATE TABLE `wp_users` (
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
 (1,	'admin',	'$P$BBdFcU2MkW0ArkTCn67bgOOjTYOdKG/',	'admin',	'dupezthomas@gmail.com',	'http://localhost/wordpress',	'2023-06-24 08:56:59',	'',	0,	'admin');
 
--- 2023-06-29 12:01:43
+-- 2023-06-29 12:02:18
