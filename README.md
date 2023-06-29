@@ -16,6 +16,7 @@ Configurez correctement les droits du dossier pour que Wordpress puisse écrire 
    - Copiez le fichier `wp-config-sample.php`, renommez-le `wp-config.php` et ajustez les valeurs pour `DB_NAME`, `DB_USER`, `DB_PASSWORD` et `DB_HOST` en fonction de votre configuration MySQL locale.
    - Ouvrez un navigateur web et accédez à l'URL de votre installation WordPress locale.
    - Activez les plugins lister ci-dessous (ACF, Contact form 7, CPT)
+   - Activez le thème Colive'in.
 
 4. **Importez le contenu du site** : Connectez vous à votre tableau de bord Wordpress. Dans votre tableau de bord WordPress, allez à `Outils > Importer`, puis sélectionnez l'option "WordPress" en bas de la liste. Cliquez sur "Choisir un fichier" et sélectionnez le fichier `wordpress_content.xml` fourni dans le dépôt git, puis suivez les instructions pour importer le contenu.
 
