@@ -31,6 +31,7 @@ Suivez ces étapes pour installer le projet sur votre machine locale :
 ## Plugins
 
 Les plugins utilisés pour le bon fonctionnement de ce thème sont les suivants :
+
     - Advenced-Custom-Field (ACF)
     - Contact-Form-7
     - Custom-Post-Type (CPT)
