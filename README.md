@@ -25,6 +25,7 @@ Configurez correctement les droits du dossier pour que Wordpress puisse écrire 
 ## Accès à l'administration
 
 Pour accéder au tableau de bord d'administration de WordPress, ajoutez `/wp-admin` à l'URL de votre site. Par exemple, si votre site est installé à l'adresse `http://localhost/test/test-colivein`, l'URL d'administration sera `http://localhost/test/test-colivein/wp-admin`.
+Pour votre première connexion au panneau, les identifiants seront user :`admin` et password : `/wp-admin`. Modifiez cet utilisateur à votre convenance, ou creez un nouvel utilisateur admin et supprimez celui-ci pour davantage de sécurité.
 
 
 ## Plugins
