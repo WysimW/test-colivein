@@ -15,7 +15,7 @@ Configurez correctement les droits du dossier pour que Wordpress puisse écrire 
 2. **Configurez une nouvelle base de données** : 
    - Ouvrez votre outil de gestion de bases de données MySQL (par exemple, phpMyAdmin). Créez une nouvelle base de données et nommez-la selon votre préférence.
    - Importez la bdd qui se trouve dans ce repo dans le dossier database, wordpress-bdd.sql
-   - Modifiez le fichier new-url.sql avec votre adresse local à la place des `http://nouvelle-adresse.com`.
+   - Modifiez le fichier new-url.sql avec votre adresse local à la place des `http://nouvelle-adresse.com`, et importez le également dans votre base de donnée.
 
 3. **Configurez WordPress** :
    - Copiez le fichier `wp-config-sample.php`, renommez-le `wp-config.php` et ajustez les valeurs pour `DB_NAME`, `DB_USER`, `DB_PASSWORD` et `DB_HOST` en fonction de votre configuration MySQL locale.

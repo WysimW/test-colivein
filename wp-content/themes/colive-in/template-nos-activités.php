@@ -28,7 +28,7 @@ get_header(); ?>
         ?>
 
 
-        <ul class="d-flex flex-row flex-wrap align-items-center">
+        <ul class="d-flex flex-row flex-wrap align-items-center justify-content-center">
             <?php
             $args = array(
                 'post_type' => 'live_together',
@@ -48,9 +48,9 @@ get_header(); ?>
                     $image = get_field('image');
             ?>
                     <li class="ouractivites-list-item">
-                        <div class="d-flex flex-column">
-                            <div class="d-flex flex-row">
-                                <div class="icon-listing"><i aria-hidden="true" class="fas <?php echo $icone; ?>  fa-listing"></i></div>
+                        <div class="d-flex flex-column activities-flex-small" >
+                            <div class="d-flex flex-row activities-flex-small">
+                                <div class="icon-listing-activities"><i aria-hidden="true" class="fas <?php echo $icone; ?>  fa-listing"></i></div>
                                 <div class="list-text d-flex flex-column ">
                                     <span class="list-title"><?php echo $titre; ?></span>
                                     <span class="list-description"><?php echo $description; ?></span>

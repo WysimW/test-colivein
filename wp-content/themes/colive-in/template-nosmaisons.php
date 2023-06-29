@@ -45,9 +45,9 @@ get_header();
                     $description = get_the_content() ? get_the_content() : get_field('description');
                     $icone = get_field('icon');
             ?>
-                    <li class="ourhouses-list-item d-flex flex-row">
-                        <div class="icon-listing"><i aria-hidden="true" class="fas <?php echo $icone; ?>  fa-listing"></i></div>
-                        <div class="list-text d-flex flex-column ">
+                    <li class="ourhouses-list-item d-flex flex-row align-items-center justify-content-center">
+                        <div class="icon-listing-house"><i aria-hidden="true" class="fas <?php echo $icone; ?>  fa-listing"></i></div>
+                        <div class="list-text d-flex flex-column">
                             <span class="list-title"><?php echo $titre; ?></span>
                             <span class="list-description"><?php echo $description; ?></span>
                         </div>
