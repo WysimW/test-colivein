@@ -13,7 +13,7 @@ function enqueue_my_stylesheets_and_scripts()
 
     wp_enqueue_script('cookie-popup', get_template_directory_uri() . '/assets/js/cookie-popup.js', array('jquery'), '1.0', true);
     wp_enqueue_script('burger-menu', get_template_directory_uri() . '/assets/js/burger-menu.js', array('jquery'), '1.0', true);
-    wp_enqueue_script('burger-menu', get_template_directory_uri() . '/assets/js/bootstrap.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.js', array('jquery'), '1.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_my_stylesheets_and_scripts');

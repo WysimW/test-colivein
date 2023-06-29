@@ -15,21 +15,28 @@ Suivez ces étapes pour installer le projet sur votre machine locale :
 
 1. **Cloner le dépôt** : `git clone git@github.com:WysimW/test-colivein.git`
 
-2. **Installer WordPress** : suivez les instructions d'installation de WordPress pour votre système d'exploitation.
-
-3. **Importer la base de données** : 
+2. **Importer la base de données** : 
 
     - Ouvrez votre outil de gestion de bases de données MySQL (par exemple, phpMyAdmin).
     - Créez une nouvelle base de données et nommez-la selon votre préférence.
     - Importez le fichier `database/wordpress_db.sql` fourni dans le dépôt git dans votre nouvelle base de données.
 
-4. **Configurer WordPress** :
+3. **Configurer WordPress** :
 
-    - Ouvrez le fichier `wp-config.php` et ajustez les valeurs pour `DB_NAME`, `DB_USER`, `DB_PASSWORD` et `DB_HOST` selon votre configuration MySQL locale.
+    - Copier le fichier `wp-config-sample.php`, renommez le `wp-config.php` et ajustez les valeurs pour `DB_NAME`, `DB_USER`, `DB_PASSWORD` et `DB_HOST` selon votre configuration MySQL locale.
     - Mettez à jour l'URL du site si nécessaire dans les réglages de WordPress.
 
-5. **Visitez votre site local** : ouvrez un navigateur web et accédez à l'URL de votre installation WordPress locale.
+4. **Visitez votre site local** : ouvrez un navigateur web et accédez à l'URL de votre installation WordPress locale.
 
 ## Support
 
-Si vous rencontrez des problèmes avec l'installation ou si vous avez des questions concernant ce projet, n'hésitez pas à créer un [Issue](lien_vers_la_page_issues_de_votre_dépôt) sur ce dépôt.
+Si vous rencontrez des problèmes avec l'installation ou si vous avez des questions concernant ce projet, n'hésitez pas à créer un [Issue] sur ce dépôt.
+
+## Plugins
+
+Les plugins utilisés pour le fonctionnement de ce thème sont les suivants :
+    - Advenced-Custom-Field (ACF)
+    - Contact-Form-7
+    - Custom-Post-Type (CPT)
+    - 
+
