@@ -11,12 +11,10 @@ get_header();
         <div class="bg-image" style="background-image: url(<?php echo $bg_image_url ?>);"></div>
     <?php endif; ?>
     <div class="container">
-        <?php
-        if (have_posts()) :
-            while (have_posts()) : the_post();
-                the_content();
-            endwhile;
-        endif;
+    <?php
+        $block_post = get_post(247);
+        echo '<h1>' . get_the_title($block_post) . '</h1>';
+        echo do_blocks($block_post->post_content);
         ?>
 
     </div>

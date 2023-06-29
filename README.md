@@ -28,15 +28,13 @@ Suivez ces étapes pour installer le projet sur votre machine locale :
 
 4. **Visitez votre site local** : ouvrez un navigateur web et accédez à l'URL de votre installation WordPress locale.
 
-## Support
-
-Si vous rencontrez des problèmes avec l'installation ou si vous avez des questions concernant ce projet, n'hésitez pas à créer un [Issue] sur ce dépôt.
-
 ## Plugins
 
-Les plugins utilisés pour le fonctionnement de ce thème sont les suivants :
+Les plugins utilisés pour le bon fonctionnement de ce thème sont les suivants :
     - Advenced-Custom-Field (ACF)
     - Contact-Form-7
     - Custom-Post-Type (CPT)
-    - 
 
+## Support
+
+Si vous rencontrez des problèmes avec l'installation ou si vous avez des questions concernant ce projet, n'hésitez pas à créer un [Issue] sur ce dépôt.
