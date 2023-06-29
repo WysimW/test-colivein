@@ -74,7 +74,7 @@ get_header(); ?>
     <div class="container">
 
         <div>
-            <div class="d-flex text-center">
+            <div class="d-flex text-center ouractivities-message-block">
                 <div>
                     <?php
                     $block_post = get_post(200);

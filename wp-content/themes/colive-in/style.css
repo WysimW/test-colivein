@@ -149,7 +149,7 @@ label {
     color: var(--primary-color);
 }
 
-@media (min-width : 374px)  {
+@media (min-width : 374px) {
     .list-title {
         font-size: 1.5em;
     }
@@ -171,14 +171,15 @@ label {
 .list-image {
     width: 95%;
     border-radius: 25px;
-    margin-top: 1em;
+    margin-top: 1.5em;
 }
 
 .icon-listing {
-    flex: 0 0 62px; 
+    flex: 0 0 62px;
 }
+
 .icon-listing-house {
-    flex: 0 0 80px; 
+    flex: 0 0 80px;
 }
 
 @media (min-width : 0px) and (max-width: 1024px) {
@@ -267,16 +268,19 @@ header .btn {
     .btn-primary {
         width: 242px;
     }
+
     .btn-submit {
         width: 450px;
     }
-    
+
     .btn-learn_more {
         width: 250px;
     }
+
     .btn-nav {
         width: 242px;
     }
+
     .btn-history {
         width: 370px;
     }
@@ -294,16 +298,19 @@ header .btn {
     .btn-primary {
         width: 242px;
     }
+
     .btn-submit {
         width: 242px;
     }
-    
+
     .btn-learn_more {
         width: 242px;
     }
+
     .btn-nav {
         width: 242px;
     }
+
     .btn-history {
         width: 242px;
     }
@@ -331,7 +338,7 @@ header .btn {
         width: 331px !important;
         height: 277px !important;
     }
-    
+
     .card-img-top {
         max-height: 220px;
         object-fit: cover;
@@ -639,14 +646,14 @@ a {
 
 @media (min-width : 1024px) {
     .footer-section {
-       justify-content: space-between;
+        justify-content: space-between;
     }
 }
 
 @media (min-width : 0px) and (max-width: 1024px) {
     .footer-section {
         flex-direction: column;
-       justify-content: center;
+        justify-content: center;
     }
 
     .footer-section .footer-list {
@@ -806,12 +813,12 @@ a {
         top: 20%;
         font-size: 32px;
     }
-    
+
     .inner-circle {
         width: 186px;
         height: 186px;
     }
-    
+
 }
 
 @media (min-width : 768px) and (max-width: 1024px) {
@@ -819,13 +826,13 @@ a {
         width: 400px;
         height: 400px;
     }
-    
-    
+
+
     .circle-title {
         top: 20%;
         font-size: 32px;
     }
-    
+
     .inner-circle {
         width: 140px;
         height: 140px;
@@ -837,13 +844,13 @@ a {
         width: 300px;
         height: 300px;
     }
-    
-    
+
+
     .circle-title {
         top: 20%;
         font-size: 32px;
     }
-    
+
     .inner-circle {
         width: 120px;
         height: 120px;
@@ -855,13 +862,13 @@ a {
         width: 200px;
         height: 200px;
     }
-    
-    
+
+
     .circle-title {
         top: 13%;
         font-size: 24px;
     }
-    
+
     .inner-circle {
         width: 90px;
         height: 90px;
@@ -916,7 +923,7 @@ a {
     }
 }
 
-@media (min-width : 0px) and (max-width: 1024px){
+@media (min-width : 0px) and (max-width: 1024px) {
     .partners-logo {
         max-height: 100px;
     }
@@ -936,14 +943,15 @@ a {
 @media (min-width : 1024px) {
     .ouractivites-list-item {
         width: 50%;
-        margin-bottom: 1.5em;
+        margin-bottom: 2em;
+        margin-top: 1em;
     }
 }
 
 @media (min-width : 0px) and (max-width: 1024px) {
     .ouractivites-list-item {
         width: 100%;
-        margin-bottom: 1.5em;
+        margin-bottom: 2em;
     }
 }
 
@@ -953,6 +961,12 @@ a {
 
 .ouractivities-strong-endmessages {
     margin-top: 1em
+}
+
+@media (max-width : 568px) {
+    .ouractivities-message-block {
+       flex-direction: column;
+    }
 }
 
 .our-history-message p {
@@ -993,7 +1007,7 @@ a {
 
 }
 
-@media (min-width : 425px)  {
+@media (min-width : 425px) {
     .our-history-message .outer-circle {
         height: 300px;
         width: 300px;
