@@ -10,11 +10,13 @@
    <!-- First index section  -- Welcome -->
    <section class="welcome-section-lg bg-colored-alpha">
        <div class="container">
-           <?php
-            $block_post = get_post(6);
-            echo '<h1>' . get_the_title($block_post) . '</h1>';
-            echo do_blocks($block_post->post_content);
-            ?>
+           <div class="text-container">
+               <?php
+                $block_post = get_post(6);
+                echo '<h1>' . get_the_title($block_post) . '</h1>';
+                echo do_blocks($block_post->post_content);
+                ?>
+           </div>
        </div>
    </section>
    </div>
@@ -78,9 +80,9 @@
            <!-- Link Button -- House section -->
            <div class="d-flex justify-content-center">
                <a href="<?php echo $ourHouses; ?>">
-               <button class="btn btn-primary btn-learn_more">
-                   En savoir plus <i class="fas fa-long-arrow-alt-right"> </i>
-               </button></a>
+                   <button class="btn btn-primary btn-learn_more">
+                       En savoir plus <i class="fas fa-long-arrow-alt-right"> </i>
+                   </button></a>
            </div>
        </div>
    </section>
@@ -125,7 +127,7 @@
                     ?>
                            <!-- HTML code with dynamic element -->
                            <li class="service-list-item d-flex flex-row">
-                           <div class="icon-listing"><i aria-hidden="true" class="fas <?php echo $icone; ?> fa-listing"></i></div>
+                               <div class="icon-listing"><i aria-hidden="true" class="fas <?php echo $icone; ?> fa-listing"></i></div>
 
                                <div class="list-text d-flex flex-column ">
                                    <span class="list-title"><?php echo $titre; ?></span>
@@ -145,9 +147,9 @@
                <!-- Link Button -- Activities section -->
                <div class="d-flex justify-content-center">
                    <a href="<?php echo $ourActivities; ?>">
-                   <button class="btn btn-primary btn-learn_more">
-                       En savoir plus <i class="fas fa-long-arrow-alt-right"> </i>
-                   </button></a>
+                       <button class="btn btn-primary btn-learn_more">
+                           En savoir plus <i class="fas fa-long-arrow-alt-right"> </i>
+                       </button></a>
                </div>
            </div>
 
@@ -185,7 +187,7 @@
                     ?>
                            <!-- HTML code with dynamic element -->
                            <li class="service-list-item d-flex flex-row">
-                           <div class="icon-listing"><i aria-hidden="true" class="fas <?php echo $icone; ?> fa-listing"></i></div>
+                               <div class="icon-listing"><i aria-hidden="true" class="fas <?php echo $icone; ?> fa-listing"></i></div>
 
                                <div class="list-text d-flex flex-column ">
                                    <span class="list-title"><?php echo $titre; ?></span>
@@ -266,16 +268,16 @@
                     // No post
                 }
                 ?>
-               
+
 
            </div>
 
            <div class="d-flex justify-content-center">
-                   <a href="<?php echo $ourHistory; ?>">
+               <a href="<?php echo $ourHistory; ?>">
                    <button class="btn btn-primary">
                        Découvrir notre histoire <i class="fas fa-long-arrow-alt-right"> </i>
                    </button></a>
-               </div>
+           </div>
    </section>
 
    <!-- Fifth index section  -- Partners -->
