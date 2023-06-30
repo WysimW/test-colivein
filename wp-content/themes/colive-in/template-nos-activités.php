@@ -5,7 +5,7 @@ $bg_image_url = get_field('bg_url');
 get_header(); ?>
 
 
-
+<!-- Description section -->
 <section class="page-description-section bg-colored">
     <?php if ($bg_image_url) : ?>
         <div class="bg-image" style="background-image: url(<?php echo $bg_image_url ?>);"></div>
@@ -19,6 +19,8 @@ get_header(); ?>
 
     </div>
 </section>
+
+<!-- Activities section -->
 <section class="ourhouse-whychoseus-section bg-colored-verylight">
     <div class="container">
         <?php
@@ -69,7 +71,7 @@ get_header(); ?>
     </div>
 </section>
 
-<!-- Third Our Houses Section - Messages -->
+<!-- Messages section -->
 <section class="ouractivities-messages-section bg-white">
     <div class="container">
 

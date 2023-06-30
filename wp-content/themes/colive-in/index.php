@@ -1,16 +1,21 @@
    <?php
+   // Wordpress page link variables stockage
     $ourHouses = get_permalink('39');
     $ourActivities = get_permalink('42');
     $ourHistory = get_permalink('44');
-
     ?>
 
-   <?php get_header('index'); ?>
 
-   <!-- First index section  -- Welcome -->
+   <?php 
+   // index header require
+   get_header('index'); 
+   ?>
+
+   <!-- Welcome section -- Large Device -->
    <section class="welcome-section-lg bg-colored-alpha">
        <div class="container">
            <div class="text-container">
+               <!-- Wordpress - Post ID 6 -->
                <?php
                 $block_post = get_post(6);
                 echo '<h1>' . get_the_title($block_post) . '</h1>';
@@ -21,9 +26,11 @@
    </section>
    </div>
 
+   <!--  Welcome section -- Small Device -->
    <section class="welcome-section-sm bg-colored">
        <div class="container">
            <div class="text-container">
+               <!-- Wordpress - Post ID 6 -->
                <?php
                 $block_post = get_post(6);
                 echo '<h1>' . get_the_title($block_post) . '</h1>';
@@ -33,21 +40,14 @@
        </div>
    </section>
 
-   <!-- Second index section  -- House -->
-   <?php
-    $args = array(
-        'post_type' => 'houses',
-        'posts_per_page' => -1,
-        'meta_key' => 'order',
-        'orderby' => 'meta_value',
-        'order' => 'ASC'
-    );
-    $query = new WP_Query($args);
-    ?>
+   <!-- Houses section -->
+
+
    <section class="house-section bg-colored">
        <div class="container">
            <!-- Intro text -- House section -->
            <div class="text-container">
+               <!-- Wordpress - Post ID 35 -->
                <?php
                 $block_post = get_post(35);
                 echo '<h1>' . get_the_title($block_post) . '</h1>';
@@ -56,14 +56,28 @@
            </div>
 
            <!-- House cards -- House section -->
+           <?php
+            // Wordpress querry -- 'houses' Post Type (CPT)
+            $args = array(
+                'post_type' => 'houses',
+                'posts_per_page' => -1,
+                'meta_key' => 'order',
+                'orderby' => 'meta_value',
+                'order' => 'ASC'
+            );
+            $query = new WP_Query($args);
+            ?>
+
            <div class="card-container d-flex p-2 justify-content-between flex-wrap">
                <?php
+                // Wordpress querry -- loop
                 if ($query->have_posts()) {
                     while ($query->have_posts()) {
                         $query->the_post();
                         $image = get_field('image');
                         $titre = get_field('title');
                 ?>
+                        <!-- House cards -->
                        <div class="card" style="width: 18rem;">
                            <img class="card-img-top" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
                            <div class="card-body">
@@ -88,12 +102,13 @@
    </section>
 
 
-   <!-- Third index section  -- Services -->
+   <!-- Activities & Services section -->
    <section class="service-section bg-colored-verylight">
        <div class="container">
 
            <!-- Activities part -->
            <div class="text-container">
+               <!-- Wordpress - Post ID 86 -->
                <?php
                 $block_post = get_post(86);
                 echo '<h1>' . get_the_title($block_post) . '</h1>';
@@ -105,7 +120,7 @@
 
                    <!-- list item  -- Activities part-->
                    <?php
-                    // WP_Query request arguments
+                    // Wordpress querry -- 'activities' Post Type (CPT)
                     $args = array(
                         'post_type' => 'activities',
                         'posts_per_page' => -1, // pour récupérer tous les posts
@@ -155,6 +170,7 @@
 
            <!-- Services part -->
            <div class="text-container">
+               <!-- Wordpress - Post ID 89 -->
                <?php
                 $block_post = get_post(89);
                 echo '<h1>' . get_the_title($block_post) . '</h1>';
@@ -283,6 +299,7 @@
    <!-- Fifth index section  -- Partners -->
    <section class="partners-section bg-white">
        <div class="container">
+           <!-- Wordpress - Post ID 86 -->
            <?php
             $block_post = get_post(195);
             echo '<h1>' . get_the_title($block_post) . '</h1>';
